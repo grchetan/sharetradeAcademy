@@ -85,31 +85,67 @@ document.addEventListener('DOMContentLoaded', () => {
   const roleEl = document.getElementById('testimonial-role');
   const avatarEl = document.getElementById('testimonial-avatar');
   const dotsContainer = document.getElementById('testimonial-dots');
+  const prevBtn = document.getElementById('testimonial-prev-btn');
+  const nextBtn = document.getElementById('testimonial-next-btn');
+  const contentWrapper = document.querySelector('.testimonial-content-wrapper');
 
   if (textEl && nameEl && roleEl && avatarEl && dotsContainer) {
     let activeIndex = 0;
+    let isTransitioning = false;
 
-    const updateTestimonial = (index) => {
-      activeIndex = index;
+    const updateTestimonial = (index, direction = 'next') => {
+      if (index === activeIndex || isTransitioning) return;
+      isTransitioning = true;
+      
       const t = testimonials[index];
       
-      // Update text with transition effects if desired, or simple text change
-      textEl.textContent = `"${t.text}"`;
-      nameEl.textContent = t.name;
-      roleEl.textContent = t.role;
-      
-      // Initials for avatar
-      avatarEl.textContent = t.name.split(" ").map(n => n[0]).join("");
-
-      // Update Active dot class
-      const dots = dotsContainer.querySelectorAll('.dot-btn');
-      dots.forEach((dot, idx) => {
-        if (idx === index) {
-          dot.classList.add('active');
-        } else {
-          dot.classList.remove('active');
-        }
-      });
+      if (contentWrapper) {
+        // Step 1: Add exit transition class
+        const fadeOutClass = direction === 'next' ? 'fade-out-left' : 'fade-out-right';
+        contentWrapper.classList.add(fadeOutClass);
+        
+        setTimeout(() => {
+          // Step 2: Swap content mid-fade
+          textEl.textContent = `"${t.text}"`;
+          nameEl.textContent = t.name;
+          roleEl.textContent = t.role;
+          avatarEl.textContent = t.name.split(" ").map(n => n[0]).join("");
+          
+          // Update dot state
+          const dots = dotsContainer.querySelectorAll('.dot-btn');
+          dots.forEach((dot, idx) => {
+            dot.classList.toggle('active', idx === index);
+          });
+          
+          // Step 3: Switch exit class to entry class
+          contentWrapper.classList.remove(fadeOutClass);
+          const fadeInClass = direction === 'next' ? 'fade-in-left' : 'fade-in-right';
+          contentWrapper.classList.add(fadeInClass);
+          
+          // Force layout reflow to register new transition
+          contentWrapper.offsetHeight;
+          
+          // Step 4: Slide back to original center
+          contentWrapper.classList.remove(fadeInClass);
+          
+          activeIndex = index;
+          isTransitioning = false;
+        }, 250); // Matches CSS transition duration
+      } else {
+        // Fallback
+        textEl.textContent = `"${t.text}"`;
+        nameEl.textContent = t.name;
+        roleEl.textContent = t.role;
+        avatarEl.textContent = t.name.split(" ").map(n => n[0]).join("");
+        
+        const dots = dotsContainer.querySelectorAll('.dot-btn');
+        dots.forEach((dot, idx) => {
+          dot.classList.toggle('active', idx === index);
+        });
+        
+        activeIndex = index;
+        isTransitioning = false;
+      }
     };
 
     // Render Indicator Dots
@@ -118,20 +154,45 @@ document.addEventListener('DOMContentLoaded', () => {
       const dot = document.createElement('button');
       dot.className = `dot-btn ${idx === activeIndex ? 'active' : ''}`;
       dot.setAttribute('aria-label', `Testimonial slide ${idx + 1}`);
-      dot.addEventListener('click', () => updateTestimonial(idx));
+      dot.addEventListener('click', () => {
+        if (idx === activeIndex) return;
+        const dir = idx > activeIndex ? 'next' : 'prev';
+        updateTestimonial(idx, dir);
+        resetInterval();
+      });
       dotsContainer.appendChild(dot);
     });
+
+    // Next/Prev Buttons
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        let prevIndex = (activeIndex - 1 + testimonials.length) % testimonials.length;
+        updateTestimonial(prevIndex, 'prev');
+        resetInterval();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        let nextIndex = (activeIndex + 1) % testimonials.length;
+        updateTestimonial(nextIndex, 'next');
+        resetInterval();
+      });
+    }
 
     // Auto rotate testimonials every 6 seconds
     let testimonialInterval = setInterval(() => {
       let nextIndex = (activeIndex + 1) % testimonials.length;
-      updateTestimonial(nextIndex);
+      updateTestimonial(nextIndex, 'next');
     }, 6000);
 
-    // Stop auto-rotation when user interacts
-    dotsContainer.addEventListener('click', () => {
+    function resetInterval() {
       clearInterval(testimonialInterval);
-    });
+      testimonialInterval = setInterval(() => {
+        let nextIndex = (activeIndex + 1) % testimonials.length;
+        updateTestimonial(nextIndex, 'next');
+      }, 6000);
+    }
   }
 
   // 5. FAQ Accordion Collapse/Expand

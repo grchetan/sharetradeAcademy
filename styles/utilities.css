@@ -104,6 +104,64 @@
   }
 }
 
+/* Stats Container Grid & Responsive Items */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-premium);
+  border-radius: var(--radius-3xl);
+}
+
+@media (min-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2rem;
+    padding: 2.5rem 2rem;
+  }
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-family: var(--font-display);
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .stat-value {
+    font-size: 2.25rem;
+  }
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+  margin-top: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  .stat-label {
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+  }
+}
+
 /* 2. Colors, Typography, and Styling helpers */
 .bg-muted\/40 {
   background-color: rgba(241, 245, 249, 0.4);

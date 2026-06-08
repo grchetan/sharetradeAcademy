@@ -186,72 +186,22 @@
 
       <!-- Stats Section -->
       <section class="stats-section container-app">
-        <div
-          class="glass rounded-3xl"
-          style="
-            padding: 1.5rem;
-            box-shadow: var(--shadow-premium);
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 1.5rem;
-            text-align: center;
-          "
-        >
+        <div class="stats-grid">
           <div class="stat-item">
-            <div
-              class="text-2xl font-bold text-gradient-gold font-display"
-              style="font-size: 2.25rem"
-            >
-              1000+
-            </div>
-            <div
-              class="text-xs text-muted-foreground mt-1"
-              style="font-size: 0.875rem"
-            >
-              Students Trained
-            </div>
+            <div class="stat-value">1000+</div>
+            <div class="stat-label">Students Trained</div>
           </div>
           <div class="stat-item">
-            <div
-              class="text-2xl font-bold text-gradient-gold font-display"
-              style="font-size: 2.25rem"
-            >
-              50+
-            </div>
-            <div
-              class="text-xs text-muted-foreground mt-1"
-              style="font-size: 0.875rem"
-            >
-              Live Batches
-            </div>
+            <div class="stat-value">50+</div>
+            <div class="stat-label">Live Batches</div>
           </div>
           <div class="stat-item">
-            <div
-              class="text-2xl font-bold text-gradient-gold font-display"
-              style="font-size: 2.25rem"
-            >
-              95%
-            </div>
-            <div
-              class="text-xs text-muted-foreground mt-1"
-              style="font-size: 0.875rem"
-            >
-              Satisfaction Rate
-            </div>
+            <div class="stat-value">95%</div>
+            <div class="stat-label">Satisfaction Rate</div>
           </div>
           <div class="stat-item">
-            <div
-              class="text-2xl font-bold text-gradient-gold font-display"
-              style="font-size: 2.25rem; white-space: nowrap"
-            >
-              Online & Offline
-            </div>
-            <div
-              class="text-xs text-muted-foreground mt-1"
-              style="font-size: 0.875rem"
-            >
-              Learning Modes
-            </div>
+            <div class="stat-value">Online & Offline</div>
+            <div class="stat-label">Learning Modes</div>
           </div>
         </div>
       </section>
@@ -732,29 +682,41 @@
         </div>
 
         <div class="mt-12 testimonial-container">
-          <div class="testimonial-box">
-            <div class="testimonial-stars">
-              <i data-lucide="star" class="fill-current"></i>
-              <i data-lucide="star" class="fill-current"></i>
-              <i data-lucide="star" class="fill-current"></i>
-              <i data-lucide="star" class="fill-current"></i>
-              <i data-lucide="star" class="fill-current"></i>
-            </div>
-            <p id="testimonial-text" class="testimonial-text">
-              "The structured curriculum and live sessions changed my approach
-              completely. Now I trade with confidence and discipline."
-            </p>
-            <div class="testimonial-author">
-              <div id="testimonial-avatar" class="author-avatar">RS</div>
-              <div>
-                <div id="testimonial-name" class="author-name">
-                  Rahul Sharma
+          <div class="testimonial-wrapper">
+            <button id="testimonial-prev-btn" type="button" class="testimonial-nav-btn prev" aria-label="Previous testimonial">
+              <i data-lucide="chevron-left"></i>
+            </button>
+
+            <div class="testimonial-box">
+              <div class="testimonial-content-wrapper">
+                <div class="testimonial-stars">
+                  <i data-lucide="star"></i>
+                  <i data-lucide="star"></i>
+                  <i data-lucide="star"></i>
+                  <i data-lucide="star"></i>
+                  <i data-lucide="star"></i>
                 </div>
-                <div id="testimonial-role" class="author-role">
-                  Software Engineer
+                <p id="testimonial-text" class="testimonial-text">
+                  "The structured curriculum and live sessions changed my approach
+                  completely. Now I trade with confidence and discipline."
+                </p>
+                <div class="testimonial-author">
+                  <div id="testimonial-avatar" class="author-avatar">RS</div>
+                  <div>
+                    <div id="testimonial-name" class="author-name">
+                      Rahul Sharma
+                    </div>
+                    <div id="testimonial-role" class="author-role">
+                      Software Engineer
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
+
+            <button id="testimonial-next-btn" type="button" class="testimonial-nav-btn next" aria-label="Next testimonial">
+              <i data-lucide="chevron-right"></i>
+            </button>
           </div>
           <!-- Indicator Dots (Dynamically populated by script.js) -->
           <div id="testimonial-dots" class="testimonial-dots"></div>
