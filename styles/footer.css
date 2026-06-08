@@ -1,13 +1,53 @@
 /* ==========================================================================
    SHARE TRADE ACADEMY - MODERN CSS DESIGN SYSTEM
-   FOOTER SECTION STYLES
+   FOOTER SECTION STYLES WITH PREMIUM TRADING GRAPHICS
    ========================================================================== */
 
-/* Footer Wrapper */
+/* Footer Wrapper with top neon glow line */
 footer.site-footer {
   margin-top: 6rem;
   color: var(--primary-foreground);
   position: relative;
+  background: var(--navy);
+  border-top: 1px solid rgba(0, 200, 150, 0.2);
+  box-shadow: 0 -15px 40px -15px rgba(0, 200, 150, 0.12);
+  overflow: hidden;
+}
+
+/* Dynamic rising stock chart background */
+.footer-chart-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.15;
+}
+
+.footer-chart-bg svg {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.footer-chart-line {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: draw-chart 10s ease-in-out infinite alternate;
+}
+
+@keyframes draw-chart {
+  0% {
+    stroke-dashoffset: 2000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
 }
 
 /* Footer Top Columns Grid */
@@ -16,6 +56,8 @@ footer.site-footer {
   gap: 2.5rem;
   padding-top: 4rem;
   padding-bottom: 4rem;
+  position: relative;
+  z-index: 2; /* Put content above background chart */
 }
 
 @media (min-width: 768px) {
@@ -44,7 +86,39 @@ footer.site-footer {
   line-height: 1.6;
 }
 
-/* Social Icon Circles */
+/* Live Market Stats pills */
+.footer-market-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.market-stat-pill {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 9999px;
+  padding: 0.35rem 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.market-stat-pill .pill-label {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.market-stat-pill .pill-value {
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+/* Social Icon Circles with Lift Up & Glow effect */
 .footer-socials {
   margin-top: 1.5rem;
   display: flex;
@@ -55,24 +129,30 @@ footer.site-footer {
   height: 2.5rem;
   width: 2.5rem;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   display: grid;
   place-items: center;
   color: #ffffff;
-  transition: var(--transition-fast);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .social-link:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--secondary);
+  color: var(--primary) !important;
+  border-color: var(--secondary);
+  box-shadow: var(--shadow-glow-green);
+  transform: translateY(-4px) scale(1.08);
 }
 
 .social-link svg {
   width: 1.25rem;
   height: 1.25rem;
   stroke-width: 2;
+  stroke: currentColor !important; /* Forces color change on hover */
 }
 
-/* Footer Navigation Links List */
+/* Footer Navigation Links List with Shift animation */
 .footer-title {
   font-size: 1rem;
   color: #ffffff;
@@ -89,8 +169,14 @@ footer.site-footer {
   color: rgba(255, 255, 255, 0.7);
 }
 
+.footer-links-list a {
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
 .footer-links-list a:hover {
-  color: #ffffff;
+  color: var(--secondary);
+  transform: translateX(6px);
 }
 
 /* Contact Info Items */
@@ -117,9 +203,11 @@ footer.site-footer {
 
 /* Footer Bottom Bar and Copyrights */
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+  position: relative;
+  z-index: 2;
 }
 
 .footer-bottom-container {
