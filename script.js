@@ -42,8 +42,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuPanel = document.getElementById('mobile-menu-panel');
   if (menuBtn && menuPanel) {
     menuBtn.addEventListener('click', () => {
+      const header = document.querySelector('header.site-header');
       const isActive = menuPanel.classList.toggle('active');
       menuBtn.setAttribute('aria-expanded', isActive);
+      
+      if (header) {
+        header.classList.toggle('menu-open', isActive);
+      }
       
       // Toggle Lucide Icons representation (Menu vs X)
       menuBtn.innerHTML = isActive 
@@ -58,6 +63,11 @@ document.addEventListener('DOMContentLoaded', () => {
         menuPanel.classList.remove('active');
         menuBtn.setAttribute('aria-expanded', 'false');
         menuBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="18" y2="18"/></svg>`;
+        
+        const header = document.querySelector('header.site-header');
+        if (header) {
+          header.classList.remove('menu-open');
+        }
       });
     });
   }
@@ -169,6 +179,60 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         });
       });
+    });
+  }
+
+  // 7. Interactive Contact Form Submission logic
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const nameInput = document.getElementById('contact-name');
+      const emailInput = document.getElementById('contact-email');
+      
+      const name = nameInput ? nameInput.value.trim() : '';
+      const email = emailInput ? emailInput.value.trim() : '';
+      
+      if (!name || !email) return;
+
+      // Create glassmorphic success overlay popup
+      const popup = document.createElement('div');
+      popup.style.position = 'fixed';
+      popup.style.inset = '0';
+      popup.style.zIndex = '9999';
+      popup.style.display = 'grid';
+      popup.style.placeItems = 'center';
+      popup.style.background = 'rgba(10, 37, 64, 0.6)';
+      popup.style.backdropFilter = 'blur(10px)';
+      popup.style.padding = '1.25rem';
+      
+      popup.innerHTML = `
+        <div class="glass" style="max-width: 400px; width: 100%; padding: 2.5rem; text-align: center; border-radius: var(--radius-3xl); border: 1px solid rgba(255, 255, 255, 0.45); box-shadow: var(--shadow-premium);">
+          <div class="feature-icon-container gradient-green shadow-glow-green animate-float" style="margin: 0 auto 1.5rem auto; width: 3.5rem; height: 3.5rem; border-radius: 50%; display: grid; place-items: center; color: white;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          </div>
+          <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--navy); font-family: var(--font-display);">Message Sent!</h3>
+          <p style="font-size: 0.875rem; color: var(--muted-foreground); margin-top: 0.75rem; line-height: 1.6;">
+            Thank you, <strong>${name}</strong>. We have received your query. Our counsellor will contact you at <strong>${email}</strong> shortly.
+          </p>
+          <button id="close-popup-btn" class="btn btn-primary mt-6 btn-full" style="background-image: var(--gradient-hero); color: white;">
+            Got it
+          </button>
+        </div>
+      `;
+
+      document.body.appendChild(popup);
+      
+      // Reset form
+      contactForm.reset();
+      
+      const closeBtn = document.getElementById('close-popup-btn');
+      if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+          popup.remove();
+        });
+      }
     });
   }
   

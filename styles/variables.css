@@ -1,0 +1,67 @@
+/* ==========================================================================
+   SHARE TRADE ACADEMY - MODERN CSS DESIGN SYSTEM
+   DESIGN TOKENS & ROOT VARIABLES
+   ========================================================================== */
+
+/* Font Families Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');
+
+:root {
+  /* Fonts */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Plus Jakarta Sans', 'Inter', sans-serif;
+
+  /* Brand Colors */
+  --navy: #0A2540;
+  --navy-light: #16365c;
+  --secondary: #00C896;      /* Trading Green */
+  --secondary-hover: #00b084;
+  --gold: #F8B400;           /* Premium Gold */
+  --gold-hover: #e0a200;
+  
+  /* System UI Colors */
+  --background: #ffffff;
+  --foreground: #182838;
+  
+  --card: #ffffff;
+  --card-foreground: #182838;
+  
+  --primary: #0A2540;
+  --primary-foreground: #f8fafc;
+  
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  
+  --accent: #e6f9f5;
+  --accent-foreground: #0A2540;
+  
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #00C896;
+  
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+
+  /* Gradients */
+  --gradient-hero: linear-gradient(135deg, var(--navy) 0%, #16365c 50%, #1b497a 100%);
+  --gradient-gold: linear-gradient(135deg, var(--gold) 0%, #ffc425 100%);
+  --gradient-green: linear-gradient(135deg, var(--secondary) 0%, #30dfb4 100%);
+  
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-3xl: 28px;
+  
+  /* Shadows */
+  --shadow-glass: 0 8px 32px 0 rgba(10, 37, 64, 0.08);
+  --shadow-premium: 0 20px 60px -20px rgba(10, 37, 64, 0.25);
+  --shadow-glow-green: 0 10px 40px -10px rgba(0, 200, 150, 0.45);
+  --shadow-glow-gold: 0 10px 40px -10px rgba(248, 180, 0, 0.45);
+  
+  /* Transitions */
+  --transition-fast: all 0.2s ease;
+  --transition-normal: all 0.3s ease;
+}

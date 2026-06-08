@@ -1,0 +1,129 @@
+/* ==========================================================================
+   SHARE TRADE ACADEMY - MODERN CSS DESIGN SYSTEM
+   CONTACT PAGE SPECIFIC STYLES
+   ========================================================================== */
+
+/* 1. Contact Information Grid and Cards */
+.contact-info-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.contact-card-item {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-2xl);
+  padding: 1.5rem 2rem;
+  box-shadow: var(--shadow-glass);
+  transition: var(--transition-normal);
+}
+
+.contact-card-item:hover {
+  border-color: rgba(0, 200, 150, 0.4);
+  box-shadow: var(--shadow-premium);
+  transform: translateY(-2px);
+}
+
+.contact-icon-wrapper {
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  color: var(--navy);
+  box-shadow: var(--shadow-glow-green);
+}
+
+.contact-detail-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted-foreground);
+  font-weight: 600;
+}
+
+.contact-detail-val {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-top: 0.25rem;
+}
+
+/* 2. Contact Glassmorphic Feedback Form */
+.contact-form-container {
+  padding: 2rem;
+}
+
+@media (min-width: 768px) {
+  .contact-form-container {
+    padding: 3rem;
+  }
+}
+
+.form-group-wrapper {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.form-field-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+}
+
+/* Glowing inputs with focus indicators */
+.form-input-field,
+.form-textarea-field {
+  width: 100%;
+  font-family: inherit;
+  font-size: 0.9rem;
+  padding: 0.875rem 1.25rem;
+  border-radius: var(--radius-xl);
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--border);
+  color: var(--foreground);
+  outline: none;
+  transition: var(--transition-fast);
+}
+
+.form-textarea-field {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-input-field:focus,
+.form-textarea-field:focus {
+  border-color: var(--secondary);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(0, 200, 150, 0.15);
+}
+
+/* Form submission action button */
+.btn-submit-form {
+  background-image: var(--gradient-green);
+  color: var(--navy);
+  font-weight: 700;
+  box-shadow: var(--shadow-glow-green);
+  border-radius: 9999px;
+  padding: 0.875rem 2rem;
+  transition: all 0.3s ease;
+}
+
+.btn-submit-form:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px -5px rgba(0, 200, 150, 0.6);
+}
+
+.btn-submit-form:active {
+  transform: translateY(0);
+}

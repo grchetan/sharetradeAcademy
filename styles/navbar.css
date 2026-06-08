@@ -1,0 +1,221 @@
+/* ==========================================================================
+   SHARE TRADE ACADEMY - MODERN CSS DESIGN SYSTEM
+   PREMIUM FLOATING NAVBAR & INTERACTIVE LINK STYLES
+   ========================================================================== */
+
+/* Header Wrapper - Premium Floating Pill Layout (Pure Solid White Theme) */
+header.site-header {
+  position: fixed;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 2.5rem);
+  max-width: 1200px;
+  z-index: 100;
+  border-radius: 9999px;
+  background: #ffffff; /* Pure Solid White */
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-glass);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Scrolled State - Moves closer to top, keeps solid white */
+header.site-header.scrolled {
+  top: 0.75rem;
+  background: #ffffff; /* Solid white, no transparency changes */
+  border-color: var(--border);
+  box-shadow: var(--shadow-premium);
+}
+
+/* Expanded State for Mobile Menu Open */
+header.site-header.menu-open {
+  border-radius: var(--radius-2xl);
+  background: #ffffff;
+  border-color: var(--border);
+  box-shadow: var(--shadow-premium);
+}
+
+/* Container Navigation Heights */
+.nav-container {
+  display: flex;
+  height: 4.5rem;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (min-width: 768px) {
+  .nav-container {
+    height: 5rem;
+  }
+}
+
+/* Logo Brand Mark Interactions */
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-icon {
+  display: grid;
+  place-items: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: var(--radius-xl);
+  color: var(--primary-foreground);
+  transition: var(--transition-normal);
+}
+
+.logo-link:hover .logo-icon {
+  transform: scale(1.08) rotate(3deg);
+  box-shadow: var(--shadow-glow-green);
+}
+
+.logo-text {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--primary);
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .logo-text {
+    font-size: 1.25rem;
+  }
+}
+
+/* Desktop Nav Links & Underline Expand Transitions */
+.nav-links {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+}
+
+.nav-link {
+  position: relative;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--navy);
+  transition: var(--transition-fast);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0.125rem;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-image: var(--gradient-green);
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--secondary-hover);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 50%;
+  left: 25%;
+}
+
+.nav-link.active {
+  color: var(--navy);
+}
+
+/* Desktop Actions CTA */
+.nav-actions {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+}
+
+/* Hamburger Menu Toggle Button */
+.mobile-menu-btn {
+  display: grid;
+  place-items: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: var(--radius-xl);
+  color: var(--primary);
+  z-index: 100;
+  transition: var(--transition-fast);
+}
+
+.mobile-menu-btn:hover {
+  background: rgba(10, 37, 64, 0.05);
+}
+
+@media (min-width: 768px) {
+  .mobile-menu-btn {
+    display: none;
+  }
+}
+
+/* Mobile Dropdown Panel - Slides down inside floating header container */
+.mobile-menu-panel {
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1.5rem;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), padding 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobile-menu-panel.active {
+  max-height: 350px;
+  padding-bottom: 1.5rem;
+}
+
+.mobile-menu-box {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mobile-nav-link {
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-xl);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--navy);
+  transition: var(--transition-fast);
+}
+
+.mobile-nav-link:hover, .mobile-nav-link.active {
+  background-color: rgba(0, 200, 150, 0.08);
+  color: var(--secondary-hover);
+}
+
+.mobile-cta-link {
+  margin-top: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-xl);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--navy);
+  background-image: var(--gradient-green);
+  box-shadow: var(--shadow-glow-green);
+}

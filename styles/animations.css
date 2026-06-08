@@ -1,0 +1,31 @@
+/* ==========================================================================
+   SHARE TRADE ACADEMY - MODERN CSS DESIGN SYSTEM
+   KEYFRAME ANIMATIONS
+   ========================================================================== */
+
+/* Floating animation keyframes */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* Pulsing indicator animation keyframes */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: .5;
+    transform: scale(0.96);
+  }
+}
+
+/* Animation utilities classes */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}

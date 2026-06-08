@@ -1,0 +1,162 @@
+/* ==========================================================================
+   SHARE TRADE ACADEMY - MODERN CSS DESIGN SYSTEM
+   ABOUT PAGE SPECIFIC STYLES
+   ========================================================================== */
+
+/* Value Icons container */
+.value-icon-container {
+  height: 3rem;
+  width: 3rem;
+  border-radius: var(--radius-xl);
+  display: grid;
+  place-items: center;
+  color: var(--primary-foreground);
+  transition: transform 0.3s ease;
+}
+
+.card-app:hover .value-icon-container {
+  transform: scale(1.1);
+}
+
+/* 1. History Timeline Layout */
+.timeline-container {
+  margin-top: 3.5rem;
+  position: relative;
+}
+
+.timeline-line {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .timeline-line {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: var(--border);
+    transform: translateX(-50%);
+  }
+}
+
+.timeline-items {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .timeline-item {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Alternate left and right positions */
+  .timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}
+
+.timeline-content-wrapper {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .timeline-content-wrapper {
+    width: 50%;
+    padding-right: 3rem;
+    text-align: right;
+  }
+  
+  .timeline-item:nth-child(even) .timeline-content-wrapper {
+    padding-right: 0;
+    padding-left: 3rem;
+    text-align: left;
+  }
+}
+
+/* Timeline Cards Styling */
+.timeline-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  border-radius: var(--radius-2xl);
+  border: 1px solid var(--border);
+  background-color: var(--card);
+  box-shadow: var(--shadow-glass);
+}
+
+.timeline-card-content {
+  text-align: left;
+}
+
+.timeline-year {
+  font-size: 0.875rem;
+  font-weight: 600;
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.timeline-title {
+  font-weight: 700;
+  color: var(--navy);
+  margin-top: 0.25rem;
+}
+
+.timeline-desc {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin-top: 0.5rem;
+  max-width: 24rem;
+}
+
+/* Timeline center dot nodes */
+.timeline-node-container {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .timeline-node-container {
+    display: flex;
+    justify-content: center;
+    width: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+  
+  .timeline-node {
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    background-image: var(--gradient-gold);
+    box-shadow: var(--shadow-glow-gold);
+    border: 4px solid var(--background);
+  }
+}
+
+/* 2. Team Cards styling */
+.team-avatar {
+  margin-left: auto;
+  margin-right: auto;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  background-image: var(--gradient-hero);
+  display: grid;
+  place-items: center;
+  color: var(--primary-foreground);
+}
