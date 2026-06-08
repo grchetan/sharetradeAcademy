@@ -235,5 +235,65 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // 8. Live NIFTY Widget Simulation (Real-Time Chart Updates)
+  const niftyValEl = document.getElementById('nifty-value');
+  const niftyChgEl = document.getElementById('nifty-change');
+  const chartBars = document.querySelectorAll('.floating-widget .chart-bar');
+  
+  if (niftyValEl && niftyChgEl && chartBars.length > 0) {
+    let currentVal = 1.84;
+    let currentPts = 412.50;
+    
+    setInterval(() => {
+      // Random change between -0.05% and +0.07%
+      const change = (Math.random() * 0.12) - 0.05;
+      currentVal += change;
+      const ptsChange = change * 224.2; 
+      currentPts += ptsChange;
+      
+      // Update values
+      niftyValEl.textContent = `${currentVal >= 0 ? '+' : ''}${currentVal.toFixed(2)}%`;
+      niftyChgEl.textContent = `${currentVal >= 0 ? '▲' : '▼'} ${Math.abs(currentPts).toFixed(2)} pts`;
+      
+      // Color updates
+      if (change >= 0) {
+        niftyValEl.style.color = 'var(--secondary)';
+        niftyChgEl.style.color = 'var(--secondary)';
+      } else {
+        niftyValEl.style.color = 'var(--destructive)';
+        niftyChgEl.style.color = 'var(--destructive)';
+      }
+      
+      // Update chart bar heights dynamically (slide values left, push new)
+      const heights = Array.from(chartBars).map(bar => parseFloat(bar.style.height || 50));
+      heights.shift(); // remove first
+      let newHeight = heights[heights.length - 1] + (Math.random() * 20 - 10);
+      newHeight = Math.max(30, Math.min(95, newHeight));
+      heights.push(newHeight);
+      
+      chartBars.forEach((bar, idx) => {
+        bar.style.height = `${heights[idx]}%`;
+      });
+    }, 2500);
+  }
+
+  // 9. Scroll Reveal Intersection Observer
+  const revealElements = document.querySelectorAll('.reveal');
+  if (revealElements.length > 0) {
+    const revealOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target); // Trigger once
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+    
+    revealElements.forEach(el => revealOnScroll.observe(el));
+  }
   
 });

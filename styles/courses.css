@@ -190,3 +190,15 @@
   margin-top: auto;
   padding-top: 2rem;
 }
+
+/* Adjust course image wrapper to compensate for larger course-card padding (2rem) and border-radius (radius-3xl) */
+.course-card .course-image-wrapper {
+  width: calc(100% + 4rem);
+  margin-top: -2rem;
+  margin-left: -2rem;
+  margin-right: -2rem;
+  margin-bottom: 2rem;
+  border-top-left-radius: var(--radius-3xl);
+  border-top-right-radius: var(--radius-3xl);
+}
+

@@ -1,567 +1,1095 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Share Trade Academy — Master the Stock Market</title>
-  <meta name="description" content="Learn trading, investing, technical analysis, and risk management from industry experts. Online & offline batches.">
-  
-  <!-- OG Meta Tags -->
-  <meta property="og:title" content="Share Trade Academy — Master the Stock Market">
-  <meta property="og:description" content="Learn trading, investing, technical analysis, and risk management from industry experts.">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Share Trade Academy — Master the Stock Market</title>
+    <meta
+      name="description"
+      content="Learn trading, investing, technical analysis, and risk management from industry experts. Online & offline batches."
+    />
 
-  <!-- External Stylesheet -->
-  <link rel="stylesheet" href="styles.css">
+    <!-- OG Meta Tags -->
+    <meta
+      property="og:title"
+      content="Share Trade Academy — Master the Stock Market"
+    />
+    <meta
+      property="og:description"
+      content="Learn trading, investing, technical analysis, and risk management from industry experts."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Lucide Icons CDN -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-</head>
-<body>
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
 
-  <!-- 1. Header Navigation -->
-  <header class="site-header">
-    <div class="container-app nav-container">
-      <a href="index.html" class="logo-link group">
-        <span class="logo-icon gradient-green shadow-glow-green">
-          <i data-lucide="trending-up" style="stroke-width: 2.5;"></i>
-        </span>
-        <span class="logo-text">
-          Share Trade<span class="text-gradient-gold"> Academy</span>
-        </span>
-      </a>
-
-      <!-- Desktop Nav Links -->
-      <nav class="nav-links">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="courses.html" class="nav-link">Courses</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-      </nav>
-
-      <!-- Desktop CTA -->
-      <div class="nav-actions">
-        <a href="courses.html" class="btn btn-secondary shadow-glow-green" style="padding: 0.625rem 1.5rem;">Enroll Now</a>
-      </div>
-
-      <!-- Mobile Hamburger Button -->
-      <button id="mobile-menu-btn" class="mobile-menu-btn glass" aria-label="Toggle menu" aria-expanded="false">
-        <i data-lucide="menu"></i>
-      </button>
-    </div>
-
-    <!-- Mobile Navigation Panel -->
-    <div id="mobile-menu-panel" class="mobile-menu-panel container-app">
-      <div class="mobile-menu-box">
-        <a href="index.html" class="mobile-nav-link">Home</a>
-        <a href="courses.html" class="mobile-nav-link">Courses</a>
-        <a href="about.html" class="mobile-nav-link">About</a>
-        <a href="contact.html" class="mobile-nav-link">Contact</a>
-        <a href="courses.html" class="mobile-cta-link">Enroll Now</a>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <!-- Live Stock Rates Ticker -->
+    <div class="stock-ticker-bar">
+      <div class="ticker-scroll">
+        <div class="ticker-group">
+          <div class="ticker-item"><span>NIFTY 50</span> <span class="ticker-up">▲ 23,465.60 (+1.12%)</span></div>
+          <div class="ticker-item"><span>SENSEX</span> <span class="ticker-up">▲ 77,150.30 (+0.95%)</span></div>
+          <div class="ticker-item"><span>BANK NIFTY</span> <span class="ticker-up">▲ 49,850.15 (+1.45%)</span></div>
+          <div class="ticker-item"><span>RELIANCE</span> <span class="ticker-down">▼ 2,912.40 (-0.35%)</span></div>
+          <div class="ticker-item"><span>HDFC BANK</span> <span class="ticker-up">▲ 1,610.80 (+2.10%)</span></div>
+          <div class="ticker-item"><span>TCS</span> <span class="ticker-down">▼ 3,850.50 (-0.80%)</span></div>
+        </div>
+        <div class="ticker-group" aria-hidden="true">
+          <div class="ticker-item"><span>NIFTY 50</span> <span class="ticker-up">▲ 23,465.60 (+1.12%)</span></div>
+          <div class="ticker-item"><span>SENSEX</span> <span class="ticker-up">▲ 77,150.30 (+0.95%)</span></div>
+          <div class="ticker-item"><span>BANK NIFTY</span> <span class="ticker-up">▲ 49,850.15 (+1.45%)</span></div>
+          <div class="ticker-item"><span>RELIANCE</span> <span class="ticker-down">▼ 2,912.40 (-0.35%)</span></div>
+          <div class="ticker-item"><span>HDFC BANK</span> <span class="ticker-up">▲ 1,610.80 (+2.10%)</span></div>
+          <div class="ticker-item"><span>TCS</span> <span class="ticker-down">▼ 3,850.50 (-0.80%)</span></div>
+        </div>
       </div>
     </div>
-  </header>
 
-  <!-- 2. Main Content Area -->
-  <main class="pt-20">
-    
-    <!-- Hero Section -->
-    <section class="hero-section gradient-hero py-20 py-32">
-      <!-- Background Image -->
-      <div class="hero-bg-overlay" style="background-image: url('assets/hero-trading.png');"></div>
-      
-      <!-- Glowing Ambient Blobs -->
-      <div class="hero-blob-1"></div>
-      <div class="hero-blob-2"></div>
-
-      <div class="container-app hero-container">
-        <div class="hero-content">
-          <span class="hero-badge">
-            <i data-lucide="sparkles" style="color: var(--gold); width: 0.875rem; height: 0.875rem;"></i> India's Premier Stock Market Academy
+    <!-- 1. Header Navigation -->
+    <header class="site-header">
+      <div class="container-app nav-container">
+        <a href="index.html" class="logo-link group">
+          <span class="logo-icon gradient-green shadow-glow-green">
+            <i data-lucide="trending-up" style="stroke-width: 2.5"></i>
           </span>
-          <h1 class="hero-title">
-            Master the Stock Market with <span class="text-gradient-gold">Confidence</span>
-          </h1>
-          <p class="hero-desc">
-            Learn Trading, Investing, Technical Analysis, Risk Management, and Wealth Creation from Industry Experts.
-          </p>
-          <div class="hero-cta-group">
-            <a href="courses.html" class="btn btn-gold" style="padding: 0.875rem 1.5rem;">
-              Enroll Now <i data-lucide="arrow-right" style="width: 1rem; height: 1rem;"></i>
-            </a>
-            <a href="#contact" class="btn btn-glass" style="padding: 0.875rem 1.5rem;">
-              <i data-lucide="play-circle" style="width: 1rem; height: 1rem;"></i> Free Demo Class
-            </a>
-          </div>
+          <span class="logo-text">
+            Share Trade<span class="text-gradient-gold"> Academy</span>
+          </span>
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <nav class="nav-links">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="courses.html" class="nav-link">Courses</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <!-- Desktop CTA -->
+        <div class="nav-actions">
+          <a
+            href="courses.html"
+            class="btn btn-secondary shadow-glow-green"
+            style="padding: 0.625rem 1.5rem"
+            >Enroll Now</a
+          >
         </div>
 
-        <!-- Floating Live Nifty Widget -->
-        <div class="floating-widget">
-          <div class="widget-header">
-            <div class="live-indicator">
-              <span class="live-dot"></span>
-              <span class="widget-title">Live Session</span>
+        <!-- Mobile Hamburger Button -->
+        <button
+          id="mobile-menu-btn"
+          class="mobile-menu-btn glass"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation Panel -->
+      <div id="mobile-menu-panel" class="mobile-menu-panel container-app">
+        <div class="mobile-menu-box">
+          <a href="index.html" class="mobile-nav-link">Home</a>
+          <a href="courses.html" class="mobile-nav-link">Courses</a>
+          <a href="about.html" class="mobile-nav-link">About</a>
+          <a href="contact.html" class="mobile-nav-link">Contact</a>
+          <a href="courses.html" class="mobile-cta-link">Enroll Now</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- 2. Main Content Area -->
+    <main class="pt-20">
+      <!-- Hero Section -->
+      <section class="hero-section gradient-hero py-20 py-32">
+        <!-- Background Image -->
+        <div
+          class="hero-bg-overlay"
+          style="background-image: url('assets/hero-trading.png')"
+        ></div>
+
+        <!-- Glowing Ambient Blobs -->
+        <div class="hero-blob-1"></div>
+        <div class="hero-blob-2"></div>
+
+        <div class="container-app hero-container">
+          <div class="hero-content">
+            <span class="hero-badge">
+              <i
+                data-lucide="sparkles"
+                style="color: var(--gold); width: 0.875rem; height: 0.875rem"
+              ></i>
+              India's Premier Stock Market Academy
+            </span>
+            <h1 class="hero-title">
+              Master the Stock Market with
+              <span class="text-gradient-gold">Confidence</span>
+            </h1>
+            <p class="hero-desc">
+              Learn Trading, Investing, Technical Analysis, Risk Management, and
+              Wealth Creation from Industry Experts.
+            </p>
+            <div class="hero-cta-group">
+              <a
+                href="courses.html"
+                class="btn btn-gold"
+                style="padding: 0.875rem 1.5rem"
+              >
+                Enroll Now
+                <i
+                  data-lucide="arrow-right"
+                  style="width: 1rem; height: 1rem"
+                ></i>
+              </a>
+              <a
+                href="#contact"
+                class="btn btn-glass"
+                style="padding: 0.875rem 1.5rem"
+              >
+                <i
+                  data-lucide="play-circle"
+                  style="width: 1rem; height: 1rem"
+                ></i>
+                Free Demo Class
+              </a>
             </div>
-            <span class="widget-symbol">NIFTY 50</span>
           </div>
-          <div class="widget-value">+1.84%</div>
-          <div class="widget-change">▲ 412.50 pts</div>
-          <div class="widget-chart">
-            <div class="chart-bar" style="height: 40%;"></div>
-            <div class="chart-bar" style="height: 55%;"></div>
-            <div class="chart-bar" style="height: 45%;"></div>
-            <div class="chart-bar" style="height: 70%;"></div>
-            <div class="chart-bar" style="height: 60%;"></div>
-            <div class="chart-bar" style="height: 80%;"></div>
-            <div class="chart-bar" style="height: 95%;"></div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Stats Section -->
-    <section class="stats-section container-app">
-      <div class="glass rounded-3xl" style="padding: 1.5rem; box-shadow: var(--shadow-premium); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; text-align: center;">
-        <div class="stat-item">
-          <div class="text-2xl font-bold text-gradient-gold font-display" style="font-size: 2.25rem;">1000+</div>
-          <div class="text-xs text-muted-foreground mt-1" style="font-size: 0.875rem;">Students Trained</div>
+          <!-- Floating Live Nifty Widget -->
+          <div class="floating-widget">
+            <div class="widget-header">
+              <div class="live-indicator">
+                <span class="live-dot"></span>
+                <span class="widget-title">Live Session</span>
+              </div>
+              <span class="widget-symbol">NIFTY 50</span>
+            </div>
+            <div class="widget-value" id="nifty-value">+1.84%</div>
+            <div class="widget-change" id="nifty-change">▲ 412.50 pts</div>
+            <div class="widget-chart" id="nifty-chart">
+              <div class="chart-bar" style="height: 40%"></div>
+              <div class="chart-bar" style="height: 55%"></div>
+              <div class="chart-bar" style="height: 45%"></div>
+              <div class="chart-bar" style="height: 70%"></div>
+              <div class="chart-bar" style="height: 60%"></div>
+              <div class="chart-bar" style="height: 80%"></div>
+              <div class="chart-bar" style="height: 95%"></div>
+            </div>
+          </div>
         </div>
-        <div class="stat-item">
-          <div class="text-2xl font-bold text-gradient-gold font-display" style="font-size: 2.25rem;">50+</div>
-          <div class="text-xs text-muted-foreground mt-1" style="font-size: 0.875rem;">Live Batches</div>
-        </div>
-        <div class="stat-item">
-          <div class="text-2xl font-bold text-gradient-gold font-display" style="font-size: 2.25rem;">95%</div>
-          <div class="text-xs text-muted-foreground mt-1" style="font-size: 0.875rem;">Satisfaction Rate</div>
-        </div>
-        <div class="stat-item">
-          <div class="text-2xl font-bold text-gradient-gold font-display" style="font-size: 2.25rem; white-space: nowrap;">Online & Offline</div>
-          <div class="text-xs text-muted-foreground mt-1" style="font-size: 0.875rem;">Learning Modes</div>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Features Section -->
-    <section class="container-app py-20 py-28">
-      <div class="max-w-2xl">
-        <span class="text-xs font-semibold uppercase tracking-widest text-secondary">Why Choose Us</span>
-        <h2 class="mt-3 text-3xl text-5xl font-bold text-primary">
-          Built for traders who want <span class="text-gradient-gold">real results</span>
-        </h2>
-        <p class="mt-4 text-muted-foreground">
-          Everything you need to go from curious beginner to confident, profitable trader.
-        </p>
-      </div>
+      <!-- Stats Section -->
+      <section class="stats-section container-app">
+        <div
+          class="glass rounded-3xl"
+          style="
+            padding: 1.5rem;
+            box-shadow: var(--shadow-premium);
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.5rem;
+            text-align: center;
+          "
+        >
+          <div class="stat-item">
+            <div
+              class="text-2xl font-bold text-gradient-gold font-display"
+              style="font-size: 2.25rem"
+            >
+              1000+
+            </div>
+            <div
+              class="text-xs text-muted-foreground mt-1"
+              style="font-size: 0.875rem"
+            >
+              Students Trained
+            </div>
+          </div>
+          <div class="stat-item">
+            <div
+              class="text-2xl font-bold text-gradient-gold font-display"
+              style="font-size: 2.25rem"
+            >
+              50+
+            </div>
+            <div
+              class="text-xs text-muted-foreground mt-1"
+              style="font-size: 0.875rem"
+            >
+              Live Batches
+            </div>
+          </div>
+          <div class="stat-item">
+            <div
+              class="text-2xl font-bold text-gradient-gold font-display"
+              style="font-size: 2.25rem"
+            >
+              95%
+            </div>
+            <div
+              class="text-xs text-muted-foreground mt-1"
+              style="font-size: 0.875rem"
+            >
+              Satisfaction Rate
+            </div>
+          </div>
+          <div class="stat-item">
+            <div
+              class="text-2xl font-bold text-gradient-gold font-display"
+              style="font-size: 2.25rem; white-space: nowrap"
+            >
+              Online & Offline
+            </div>
+            <div
+              class="text-xs text-muted-foreground mt-1"
+              style="font-size: 0.875rem"
+            >
+              Learning Modes
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <div class="mt-12 grid grid-features gap-5">
-        <!-- Feature 1 -->
-        <div class="card-app">
-          <div class="feature-icon-container gradient-green shadow-glow-green">
-            <i data-lucide="graduation-cap"></i>
-          </div>
-          <h3 class="mt-5 font-semibold text-primary">Beginner Friendly</h3>
-          <p class="mt-2 text-sm text-muted-foreground">Zero jargon. Step-by-step learning from absolute basics.</p>
-        </div>
-        <!-- Feature 2 -->
-        <div class="card-app">
-          <div class="feature-icon-container gradient-green shadow-glow-green">
-            <i data-lucide="bar-chart-3"></i>
-          </div>
-          <h3 class="mt-5 font-semibold text-primary">Live Market Sessions</h3>
-          <p class="mt-2 text-sm text-muted-foreground">Trade alongside mentors during live market hours.</p>
-        </div>
-        <!-- Feature 3 -->
-        <div class="card-app">
-          <div class="feature-icon-container gradient-green shadow-glow-green">
-            <i data-lucide="users"></i>
-          </div>
-          <h3 class="mt-5 font-semibold text-primary">Expert Mentorship</h3>
-          <p class="mt-2 text-sm text-muted-foreground">Personalised guidance from professional traders.</p>
-        </div>
-        <!-- Feature 4 -->
-        <div class="card-app">
-          <div class="feature-icon-container gradient-green shadow-glow-green">
-            <i data-lucide="shield-check"></i>
-          </div>
-          <h3 class="mt-5 font-semibold text-primary">Risk Management</h3>
-          <p class="mt-2 text-sm text-muted-foreground">Capital protection frameworks used by pros.</p>
-        </div>
-        <!-- Feature 5 -->
-        <div class="card-app">
-          <div class="feature-icon-container gradient-green shadow-glow-green">
-            <i data-lucide="award"></i>
-          </div>
-          <h3 class="mt-5 font-semibold text-primary">Certificate of Completion</h3>
-          <p class="mt-2 text-sm text-muted-foreground">Industry-recognised certification on graduation.</p>
-        </div>
-        <!-- Feature 6 -->
-        <div class="card-app">
-          <div class="feature-icon-container gradient-green shadow-glow-green">
-            <i data-lucide="message-circle"></i>
-          </div>
-          <h3 class="mt-5 font-semibold text-primary">Lifetime Community</h3>
-          <p class="mt-2 text-sm text-muted-foreground">Stay connected with traders & mentors forever.</p>
-        </div>
-        <!-- Feature 7 -->
-        <div class="card-app">
-          <div class="feature-icon-container gradient-green shadow-glow-green">
-            <i data-lucide="video"></i>
-          </div>
-          <h3 class="mt-5 font-semibold text-primary">Recorded Sessions</h3>
-          <p class="mt-2 text-sm text-muted-foreground">Revisit every session on your own time.</p>
-        </div>
-        <!-- Feature 8 -->
-        <div class="card-app">
-          <div class="feature-icon-container gradient-green shadow-glow-green">
-            <i data-lucide="briefcase"></i>
-          </div>
-          <h3 class="mt-5 font-semibold text-primary">Career Guidance</h3>
-          <p class="mt-2 text-sm text-muted-foreground">Pathway to becoming a full-time trader.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Courses Teaser Section -->
-    <section class="bg-muted/40 py-20 py-28">
-      <div class="container-app">
-        <div class="text-center max-w-2xl mx-auto">
-          <span class="text-xs font-semibold uppercase tracking-widest text-secondary">Courses</span>
+      <!-- Features Section -->
+      <section class="container-app py-20 py-28">
+        <div class="max-w-2xl">
+          <span
+            class="text-xs font-semibold uppercase tracking-widest text-secondary"
+            >Why Choose Us</span
+          >
           <h2 class="mt-3 text-3xl text-5xl font-bold text-primary">
-            Choose Your <span class="text-gradient-gold">Learning Path</span>
+            Built for traders who want
+            <span class="text-gradient-gold">real results</span>
           </h2>
           <p class="mt-4 text-muted-foreground">
-            From your first trade to managing a full portfolio — pick the tier that fits your goal.
+            Everything you need to go from curious beginner to confident,
+            profitable trader.
           </p>
         </div>
 
-        <div class="courses-grid-section grid-courses grid">
-          <!-- Course Card 1: Basic -->
-          <div class="card-app" style="display: flex; flex-direction: column;">
-            <div class="course-card-accent course-accent-basic"></div>
-            <div style="position: relative; flex: 1; display: flex; flex-direction: column;">
-              <h3 class="text-2xl font-bold text-primary">Basic Course</h3>
-              <p class="text-sm text-muted-foreground mt-1">Perfect for Beginners</p>
-              <div class="mt-5" style="display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; font-weight: 600; color: var(--navy);">
-                <span style="height: 0.5rem; width: 0.5rem; border-radius: 50%; background-color: var(--secondary);"></span> Duration: 1 Month
-              </div>
-              <ul class="syllabus-list">
-                <li class="syllabus-item"><i data-lucide="check" class="text-secondary" style="width: 1rem; height: 1rem;"></i> <span>Introduction to Stock Market</span></li>
-                <li class="syllabus-item"><i data-lucide="check" class="text-secondary" style="width: 1rem; height: 1rem;"></i> <span>Demat & Trading Account</span></li>
-                <li class="syllabus-item"><i data-lucide="check" class="text-secondary" style="width: 1rem; height: 1rem;"></i> <span>Candlestick Basics</span></li>
-                <li class="syllabus-item"><i data-lucide="check" class="text-secondary" style="width: 1rem; height: 1rem;"></i> <span>Support & Resistance</span></li>
-                <li class="syllabus-item"><i data-lucide="check" class="text-secondary" style="width: 1rem; height: 1rem;"></i> <span>Market Terminology</span></li>
-                <li class="syllabus-item"><i data-lucide="check" class="text-secondary" style="width: 1rem; height: 1rem;"></i> <span>Risk Management Basics</span></li>
-              </ul>
-              <a href="courses.html" class="btn btn-primary mt-8" style="background-color: var(--primary); color: white;">
-                Learn More <i data-lucide="arrow-right" style="width: 1rem; height: 1rem;"></i>
-              </a>
+        <div class="mt-12 grid grid-features gap-5 reveal">
+          <!-- Feature 1 -->
+          <div class="card-app">
+            <div
+              class="feature-icon-container gradient-green shadow-glow-green"
+            >
+              <i data-lucide="graduation-cap"></i>
             </div>
+            <h3 class="mt-5 font-semibold text-primary">Beginner Friendly</h3>
+            <p class="mt-2 text-sm text-muted-foreground">
+              Zero jargon. Step-by-step learning from absolute basics.
+            </p>
+          </div>
+          <!-- Feature 2 -->
+          <div class="card-app">
+            <div
+              class="feature-icon-container gradient-green shadow-glow-green"
+            >
+              <i data-lucide="bar-chart-3"></i>
+            </div>
+            <h3 class="mt-5 font-semibold text-primary">
+              Live Market Sessions
+            </h3>
+            <p class="mt-2 text-sm text-muted-foreground">
+              Trade alongside mentors during live market hours.
+            </p>
+          </div>
+          <!-- Feature 3 -->
+          <div class="card-app">
+            <div
+              class="feature-icon-container gradient-green shadow-glow-green"
+            >
+              <i data-lucide="users"></i>
+            </div>
+            <h3 class="mt-5 font-semibold text-primary">Expert Mentorship</h3>
+            <p class="mt-2 text-sm text-muted-foreground">
+              Personalised guidance from professional traders.
+            </p>
+          </div>
+          <!-- Feature 4 -->
+          <div class="card-app">
+            <div
+              class="feature-icon-container gradient-green shadow-glow-green"
+            >
+              <i data-lucide="shield-check"></i>
+            </div>
+            <h3 class="mt-5 font-semibold text-primary">Risk Management</h3>
+            <p class="mt-2 text-sm text-muted-foreground">
+              Capital protection frameworks used by pros.
+            </p>
+          </div>
+          <!-- Feature 5 -->
+          <div class="card-app">
+            <div
+              class="feature-icon-container gradient-green shadow-glow-green"
+            >
+              <i data-lucide="award"></i>
+            </div>
+            <h3 class="mt-5 font-semibold text-primary">
+              Certificate of Completion
+            </h3>
+            <p class="mt-2 text-sm text-muted-foreground">
+              Industry-recognised certification on graduation.
+            </p>
+          </div>
+          <!-- Feature 6 -->
+          <div class="card-app">
+            <div
+              class="feature-icon-container gradient-green shadow-glow-green"
+            >
+              <i data-lucide="message-circle"></i>
+            </div>
+            <h3 class="mt-5 font-semibold text-primary">Lifetime Community</h3>
+            <p class="mt-2 text-sm text-muted-foreground">
+              Stay connected with traders & mentors forever.
+            </p>
+          </div>
+          <!-- Feature 7 -->
+          <div class="card-app">
+            <div
+              class="feature-icon-container gradient-green shadow-glow-green"
+            >
+              <i data-lucide="video"></i>
+            </div>
+            <h3 class="mt-5 font-semibold text-primary">Recorded Sessions</h3>
+            <p class="mt-2 text-sm text-muted-foreground">
+              Revisit every session on your own time.
+            </p>
+          </div>
+          <!-- Feature 8 -->
+          <div class="card-app">
+            <div
+              class="feature-icon-container gradient-green shadow-glow-green"
+            >
+              <i data-lucide="briefcase"></i>
+            </div>
+            <h3 class="mt-5 font-semibold text-primary">Career Guidance</h3>
+            <p class="mt-2 text-sm text-muted-foreground">
+              Pathway to becoming a full-time trader.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Courses Teaser Section -->
+      <section class="bg-muted/40 py-20 py-28">
+        <div class="container-app">
+          <div class="text-center max-w-2xl mx-auto">
+            <span
+              class="text-xs font-semibold uppercase tracking-widest text-secondary"
+              >Courses</span
+            >
+            <h2 class="mt-3 text-3xl text-5xl font-bold text-primary">
+              Choose Your <span class="text-gradient-gold">Learning Path</span>
+            </h2>
+            <p class="mt-4 text-muted-foreground">
+              From your first trade to managing a full portfolio — pick the tier
+              that fits your goal.
+            </p>
           </div>
 
-          <!-- Course Card 2: Advanced (Featured) -->
-          <div class="card-app course-card-popular" style="display: flex; flex-direction: column;">
-            <span class="badge-app badge-gold course-popular-tag">Most Popular</span>
-            <div class="course-card-accent course-accent-advanced"></div>
-            <div style="position: relative; flex: 1; display: flex; flex-direction: column;">
-              <h3 class="text-2xl font-bold text-primary">Advanced Course</h3>
-              <p class="text-sm text-muted-foreground mt-1">Professional Trader Program</p>
-              <div class="mt-5" style="display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; font-weight: 600; color: var(--navy);">
-                <span style="height: 0.5rem; width: 0.5rem; border-radius: 50%; background-color: var(--secondary);"></span> Duration: 3 Months
+          <div class="courses-grid-section grid-courses grid reveal">
+            <!-- Course Card 1: Basic -->
+            <div class="card-app" style="display: flex; flex-direction: column">
+              <div class="course-image-wrapper">
+                <div class="course-card-image" style="background-image: url('assets/course-basic.png');"></div>
               </div>
-              <ul class="syllabus-list">
-                <li class="syllabus-item"><i data-lucide="check" class="text-secondary" style="width: 1rem; height: 1rem;"></i> <span>Advanced Price Action</span></li>
-                <li class="syllabus-item"><i data-lucide="check" class="text-secondary" style="width: 1rem; height: 1rem;"></i> <span>Options Trading</span></li>
-                <li class="syllabus-item"><i data-lucide="check" class="text-secondary" style="width: 1rem; height: 1rem;"></i> <span>Futures Trading</span></li>
-                <li class="syllabus-item"><i data-lucide="check" class="text-secondary" style="width: 1rem; height: 1rem;"></i> <span>Smart Money Concepts</span></li>
-                <li class="syllabus-item"><i data-lucide="check" class="text-secondary" style="width: 1rem; height: 1rem;"></i> <span>Institutional Trading</span></li>
-                <li class="syllabus-item"><i data-lucide="check" class="text-secondary" style="width: 1rem; height: 1rem;"></i> <span>Portfolio Management</span></li>
-                <li class="syllabus-item"><i data-lucide="check" class="text-secondary" style="width: 1rem; height: 1rem;"></i> <span>Advanced Risk Management</span></li>
-              </ul>
-              <a href="courses.html" class="btn btn-gold mt-8">
-                Learn More <i data-lucide="arrow-right" style="width: 1rem; height: 1rem;"></i>
-              </a>
+              <div class="course-card-accent course-accent-basic"></div>
+              <div
+                style="
+                  position: relative;
+                  flex: 1;
+                  display: flex;
+                  flex-direction: column;
+                "
+              >
+                <h3 class="text-2xl font-bold text-primary">Basic Course</h3>
+                <p class="text-sm text-muted-foreground mt-1">
+                  Perfect for Beginners
+                </p>
+                <div
+                  class="mt-5"
+                  style="
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    font-size: 0.875rem;
+                    font-weight: 600;
+                    color: var(--navy);
+                  "
+                >
+                  <span
+                    style="
+                      height: 0.5rem;
+                      width: 0.5rem;
+                      border-radius: 50%;
+                      background-color: var(--secondary);
+                    "
+                  ></span>
+                  Duration: 1 Month
+                </div>
+                <ul class="syllabus-list">
+                  <li class="syllabus-item">
+                    <i
+                      data-lucide="check"
+                      class="text-secondary"
+                      style="width: 1rem; height: 1rem"
+                    ></i>
+                    <span>Introduction to Stock Market</span>
+                  </li>
+                  <li class="syllabus-item">
+                    <i
+                      data-lucide="check"
+                      class="text-secondary"
+                      style="width: 1rem; height: 1rem"
+                    ></i>
+                    <span>Demat & Trading Account</span>
+                  </li>
+                  <li class="syllabus-item">
+                    <i
+                      data-lucide="check"
+                      class="text-secondary"
+                      style="width: 1rem; height: 1rem"
+                    ></i>
+                    <span>Candlestick Basics</span>
+                  </li>
+                  <li class="syllabus-item">
+                    <i
+                      data-lucide="check"
+                      class="text-secondary"
+                      style="width: 1rem; height: 1rem"
+                    ></i>
+                    <span>Support & Resistance</span>
+                  </li>
+                  <li class="syllabus-item">
+                    <i
+                      data-lucide="check"
+                      class="text-secondary"
+                      style="width: 1rem; height: 1rem"
+                    ></i>
+                    <span>Market Terminology</span>
+                  </li>
+                  <li class="syllabus-item">
+                    <i
+                      data-lucide="check"
+                      class="text-secondary"
+                      style="width: 1rem; height: 1rem"
+                    ></i>
+                    <span>Risk Management Basics</span>
+                  </li>
+                </ul>
+                <a
+                  href="courses.html"
+                  class="btn btn-primary mt-8"
+                  style="background-color: var(--primary); color: white"
+                >
+                  Learn More
+                  <i
+                    data-lucide="arrow-right"
+                    style="width: 1rem; height: 1rem"
+                  ></i>
+                </a>
+              </div>
             </div>
-          </div>
 
-          <!-- Course Card 3: Intermediate -->
-          <div class="card-app" style="display: flex; flex-direction: column;">
-            <div class="course-card-accent course-accent-intermediate"></div>
-            <div style="position: relative; flex: 1; display: flex; flex-direction: column;">
-              <h3 class="text-2xl font-bold text-primary">Intermediate Course</h3>
-              <p class="text-sm text-muted-foreground mt-1">For Serious Traders</p>
-              <div class="mt-5" style="display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; font-weight: 600; color: var(--navy);">
-                <span style="height: 0.5rem; width: 0.5rem; border-radius: 50%; background-color: var(--secondary);"></span> Duration: 2 Months
+            <!-- Course Card 2: Advanced (Featured) -->
+            <div
+              class="card-app course-card-popular"
+              style="display: flex; flex-direction: column"
+            >
+              <span class="badge-app badge-gold course-popular-tag"
+                >Most Popular</span
+              >
+              <div class="course-image-wrapper">
+                <div class="course-card-image" style="background-image: url('assets/course-advanced.png');"></div>
               </div>
-              <ul class="syllabus-list">
-                <li class="syllabus-item"><i data-lucide="check" class="text-secondary" style="width: 1rem; height: 1rem;"></i> <span>Technical Analysis</span></li>
-                <li class="syllabus-item"><i data-lucide="check" class="text-secondary" style="width: 1rem; height: 1rem;"></i> <span>Trend Analysis</span></li>
-                <li class="syllabus-item"><i data-lucide="check" class="text-secondary" style="width: 1rem; height: 1rem;"></i> <span>Chart Patterns</span></li>
-                <li class="syllabus-item"><i data-lucide="check" class="text-secondary" style="width: 1rem; height: 1rem;"></i> <span>Swing Trading</span></li>
-                <li class="syllabus-item"><i data-lucide="check" class="text-secondary" style="width: 1rem; height: 1rem;"></i> <span>Intraday Trading</span></li>
-                <li class="syllabus-item"><i data-lucide="check" class="text-secondary" style="width: 1rem; height: 1rem;"></i> <span>Trading Psychology</span></li>
-              </ul>
-              <a href="courses.html" class="btn btn-primary mt-8" style="background-color: var(--primary); color: white;">
-                Learn More <i data-lucide="arrow-right" style="width: 1rem; height: 1rem;"></i>
-              </a>
+              <div class="course-card-accent course-accent-advanced"></div>
+              <div
+                style="
+                  position: relative;
+                  flex: 1;
+                  display: flex;
+                  flex-direction: column;
+                "
+              >
+                <h3 class="text-2xl font-bold text-primary">Advanced Course</h3>
+                <p class="text-sm text-muted-foreground mt-1">
+                  Professional Trader Program
+                </p>
+                <div
+                  class="mt-5"
+                  style="
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    font-size: 0.875rem;
+                    font-weight: 600;
+                    color: var(--navy);
+                  "
+                >
+                  <span
+                    style="
+                      height: 0.5rem;
+                      width: 0.5rem;
+                      border-radius: 50%;
+                      background-color: var(--secondary);
+                    "
+                  ></span>
+                  Duration: 3 Months
+                </div>
+                <ul class="syllabus-list">
+                  <li class="syllabus-item">
+                    <i
+                      data-lucide="check"
+                      class="text-secondary"
+                      style="width: 1rem; height: 1rem"
+                    ></i>
+                    <span>Advanced Price Action</span>
+                  </li>
+                  <li class="syllabus-item">
+                    <i
+                      data-lucide="check"
+                      class="text-secondary"
+                      style="width: 1rem; height: 1rem"
+                    ></i>
+                    <span>Options Trading</span>
+                  </li>
+                  <li class="syllabus-item">
+                    <i
+                      data-lucide="check"
+                      class="text-secondary"
+                      style="width: 1rem; height: 1rem"
+                    ></i>
+                    <span>Futures Trading</span>
+                  </li>
+                  <li class="syllabus-item">
+                    <i
+                      data-lucide="check"
+                      class="text-secondary"
+                      style="width: 1rem; height: 1rem"
+                    ></i>
+                    <span>Smart Money Concepts</span>
+                  </li>
+                  <li class="syllabus-item">
+                    <i
+                      data-lucide="check"
+                      class="text-secondary"
+                      style="width: 1rem; height: 1rem"
+                    ></i>
+                    <span>Institutional Trading</span>
+                  </li>
+                  <li class="syllabus-item">
+                    <i
+                      data-lucide="check"
+                      class="text-secondary"
+                      style="width: 1rem; height: 1rem"
+                    ></i>
+                    <span>Portfolio Management</span>
+                  </li>
+                  <li class="syllabus-item">
+                    <i
+                      data-lucide="check"
+                      class="text-secondary"
+                      style="width: 1rem; height: 1rem"
+                    ></i>
+                    <span>Advanced Risk Management</span>
+                  </li>
+                </ul>
+                <a href="courses.html" class="btn btn-gold mt-8">
+                  Learn More
+                  <i
+                    data-lucide="arrow-right"
+                    style="width: 1rem; height: 1rem"
+                  ></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Course Card 3: Intermediate -->
+            <div class="card-app" style="display: flex; flex-direction: column">
+              <div class="course-image-wrapper">
+                <div class="course-card-image" style="background-image: url('assets/course-intermediate.png');"></div>
+              </div>
+              <div class="course-card-accent course-accent-intermediate"></div>
+              <div
+                style="
+                  position: relative;
+                  flex: 1;
+                  display: flex;
+                  flex-direction: column;
+                "
+              >
+                <h3 class="text-2xl font-bold text-primary">
+                  Intermediate Course
+                </h3>
+                <p class="text-sm text-muted-foreground mt-1">
+                  For Serious Traders
+                </p>
+                <div
+                  class="mt-5"
+                  style="
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    font-size: 0.875rem;
+                    font-weight: 600;
+                    color: var(--navy);
+                  "
+                >
+                  <span
+                    style="
+                      height: 0.5rem;
+                      width: 0.5rem;
+                      border-radius: 50%;
+                      background-color: var(--secondary);
+                    "
+                  ></span>
+                  Duration: 2 Months
+                </div>
+                <ul class="syllabus-list">
+                  <li class="syllabus-item">
+                    <i
+                      data-lucide="check"
+                      class="text-secondary"
+                      style="width: 1rem; height: 1rem"
+                    ></i>
+                    <span>Technical Analysis</span>
+                  </li>
+                  <li class="syllabus-item">
+                    <i
+                      data-lucide="check"
+                      class="text-secondary"
+                      style="width: 1rem; height: 1rem"
+                    ></i>
+                    <span>Trend Analysis</span>
+                  </li>
+                  <li class="syllabus-item">
+                    <i
+                      data-lucide="check"
+                      class="text-secondary"
+                      style="width: 1rem; height: 1rem"
+                    ></i>
+                    <span>Chart Patterns</span>
+                  </li>
+                  <li class="syllabus-item">
+                    <i
+                      data-lucide="check"
+                      class="text-secondary"
+                      style="width: 1rem; height: 1rem"
+                    ></i>
+                    <span>Swing Trading</span>
+                  </li>
+                  <li class="syllabus-item">
+                    <i
+                      data-lucide="check"
+                      class="text-secondary"
+                      style="width: 1rem; height: 1rem"
+                    ></i>
+                    <span>Intraday Trading</span>
+                  </li>
+                  <li class="syllabus-item">
+                    <i
+                      data-lucide="check"
+                      class="text-secondary"
+                      style="width: 1rem; height: 1rem"
+                    ></i>
+                    <span>Trading Psychology</span>
+                  </li>
+                </ul>
+                <a
+                  href="courses.html"
+                  class="btn btn-primary mt-8"
+                  style="background-color: var(--primary); color: white"
+                >
+                  Learn More
+                  <i
+                    data-lucide="arrow-right"
+                    style="width: 1rem; height: 1rem"
+                  ></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Testimonials Slider Section -->
-    <section class="container-app py-20 py-28">
-      <div class="text-center max-w-2xl mx-auto">
-        <span class="text-xs font-semibold uppercase tracking-widest text-secondary">Success Stories</span>
-        <h2 class="mt-3 text-3xl text-5xl font-bold text-primary">
-          Real Students. <span class="text-gradient-gold">Real Results.</span>
-        </h2>
-      </div>
-
-      <div class="mt-12 testimonial-container">
-        <div class="testimonial-box">
-          <div class="testimonial-stars">
-            <i data-lucide="star" class="fill-current"></i>
-            <i data-lucide="star" class="fill-current"></i>
-            <i data-lucide="star" class="fill-current"></i>
-            <i data-lucide="star" class="fill-current"></i>
-            <i data-lucide="star" class="fill-current"></i>
-          </div>
-          <p id="testimonial-text" class="testimonial-text">"The structured curriculum and live sessions changed my approach completely. Now I trade with confidence and discipline."</p>
-          <div class="testimonial-author">
-            <div id="testimonial-avatar" class="author-avatar">RS</div>
-            <div>
-              <div id="testimonial-name" class="author-name">Rahul Sharma</div>
-              <div id="testimonial-role" class="author-role">Software Engineer</div>
-            </div>
-          </div>
-        </div>
-        <!-- Indicator Dots (Dynamically populated by script.js) -->
-        <div id="testimonial-dots" class="testimonial-dots"></div>
-      </div>
-    </section>
-
-    <!-- Free Resources Section -->
-    <section class="bg-muted/40 py-20 py-28">
-      <div class="container-app">
+      <!-- Testimonials Slider Section -->
+      <section class="container-app py-20 py-28 reveal">
         <div class="text-center max-w-2xl mx-auto">
-          <span class="text-xs font-semibold uppercase tracking-widest text-secondary">Free Resources</span>
+          <span
+            class="text-xs font-semibold uppercase tracking-widest text-secondary"
+            >Success Stories</span
+          >
           <h2 class="mt-3 text-3xl text-5xl font-bold text-primary">
-            Start Learning <span class="text-gradient-gold">Today</span>
+            Real Students. <span class="text-gradient-gold">Real Results.</span>
           </h2>
         </div>
-        
-        <div class="mt-12 grid grid-resources gap-5">
-          <!-- Resource 1 -->
-          <div class="card-app group" style="cursor: pointer;">
-            <div class="feature-icon-container gradient-gold text-gold-foreground" style="color: var(--navy); box-shadow: var(--shadow-glow-gold);">
-              <i data-lucide="book-open"></i>
+
+        <div class="mt-12 testimonial-container">
+          <div class="testimonial-box">
+            <div class="testimonial-stars">
+              <i data-lucide="star" class="fill-current"></i>
+              <i data-lucide="star" class="fill-current"></i>
+              <i data-lucide="star" class="fill-current"></i>
+              <i data-lucide="star" class="fill-current"></i>
+              <i data-lucide="star" class="fill-current"></i>
             </div>
-            <h3 class="mt-5 font-semibold text-primary">Trading Blogs</h3>
-            <p class="mt-2 text-sm text-muted-foreground">In-depth articles on strategies & market structure.</p>
+            <p id="testimonial-text" class="testimonial-text">
+              "The structured curriculum and live sessions changed my approach
+              completely. Now I trade with confidence and discipline."
+            </p>
+            <div class="testimonial-author">
+              <div id="testimonial-avatar" class="author-avatar">RS</div>
+              <div>
+                <div id="testimonial-name" class="author-name">
+                  Rahul Sharma
+                </div>
+                <div id="testimonial-role" class="author-role">
+                  Software Engineer
+                </div>
+              </div>
+            </div>
           </div>
-          <!-- Resource 2 -->
-          <div class="card-app group" style="cursor: pointer;">
-            <div class="feature-icon-container gradient-gold text-gold-foreground" style="color: var(--navy); box-shadow: var(--shadow-glow-gold);">
-              <i data-lucide="newspaper"></i>
-            </div>
-            <h3 class="mt-5 font-semibold text-primary">Market Updates</h3>
-            <p class="mt-2 text-sm text-muted-foreground">Daily insights on Indian markets.</p>
+          <!-- Indicator Dots (Dynamically populated by script.js) -->
+          <div id="testimonial-dots" class="testimonial-dots"></div>
+        </div>
+      </section>
+
+      <!-- Free Resources Section -->
+      <section class="bg-muted/40 py-20 py-28">
+        <div class="container-app">
+          <div class="text-center max-w-2xl mx-auto">
+            <span
+              class="text-xs font-semibold uppercase tracking-widest text-secondary"
+              >Free Resources</span
+            >
+            <h2 class="mt-3 text-3xl text-5xl font-bold text-primary">
+              Start Learning <span class="text-gradient-gold">Today</span>
+            </h2>
           </div>
-          <!-- Resource 3 -->
-          <div class="card-app group" style="cursor: pointer;">
-            <div class="feature-icon-container gradient-gold text-gold-foreground" style="color: var(--navy); box-shadow: var(--shadow-glow-gold);">
-              <i data-lucide="play-circle"></i>
+
+          <div class="mt-12 grid grid-resources gap-5 reveal">
+            <!-- Resource 1 -->
+            <div class="card-app group" style="cursor: pointer">
+              <div
+                class="feature-icon-container gradient-gold text-gold-foreground"
+                style="color: var(--navy); box-shadow: var(--shadow-glow-gold)"
+              >
+                <i data-lucide="book-open"></i>
+              </div>
+              <h3 class="mt-5 font-semibold text-primary">Trading Blogs</h3>
+              <p class="mt-2 text-sm text-muted-foreground">
+                In-depth articles on strategies & market structure.
+              </p>
             </div>
-            <h3 class="mt-5 font-semibold text-primary">Free Webinars</h3>
-            <p class="mt-2 text-sm text-muted-foreground">Live monthly masterclasses with experts.</p>
-          </div>
-          <!-- Resource 4 -->
-          <div class="card-app group" style="cursor: pointer;">
-            <div class="feature-icon-container gradient-gold text-gold-foreground" style="color: var(--navy); box-shadow: var(--shadow-glow-gold);">
-              <i data-lucide="target"></i>
+            <!-- Resource 2 -->
+            <div class="card-app group" style="cursor: pointer">
+              <div
+                class="feature-icon-container gradient-gold text-gold-foreground"
+                style="color: var(--navy); box-shadow: var(--shadow-glow-gold)"
+              >
+                <i data-lucide="newspaper"></i>
+              </div>
+              <h3 class="mt-5 font-semibold text-primary">Market Updates</h3>
+              <p class="mt-2 text-sm text-muted-foreground">
+                Daily insights on Indian markets.
+              </p>
             </div>
-            <h3 class="mt-5 font-semibold text-primary">Trading Tips</h3>
-            <p class="mt-2 text-sm text-muted-foreground">Actionable setups & risk frameworks.</p>
+            <!-- Resource 3 -->
+            <div class="card-app group" style="cursor: pointer">
+              <div
+                class="feature-icon-container gradient-gold text-gold-foreground"
+                style="color: var(--navy); box-shadow: var(--shadow-glow-gold)"
+              >
+                <i data-lucide="play-circle"></i>
+              </div>
+              <h3 class="mt-5 font-semibold text-primary">Free Webinars</h3>
+              <p class="mt-2 text-sm text-muted-foreground">
+                Live monthly masterclasses with experts.
+              </p>
+            </div>
+            <!-- Resource 4 -->
+            <div class="card-app group" style="cursor: pointer">
+              <div
+                class="feature-icon-container gradient-gold text-gold-foreground"
+                style="color: var(--navy); box-shadow: var(--shadow-glow-gold)"
+              >
+                <i data-lucide="target"></i>
+              </div>
+              <h3 class="mt-5 font-semibold text-primary">Trading Tips</h3>
+              <p class="mt-2 text-sm text-muted-foreground">
+                Actionable setups & risk frameworks.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- FAQ Accordion Section -->
-    <section class="container-app py-20 py-28">
-      <div class="faq-grid">
+      <!-- FAQ Accordion Section -->
+      <section class="container-app py-20 py-28 reveal">
+        <div class="faq-grid">
+          <div>
+            <span
+              class="text-xs font-semibold uppercase tracking-widest text-secondary"
+              >FAQ</span
+            >
+            <h2 class="mt-3 text-3xl text-5xl font-bold text-primary">
+              Questions?
+              <span class="text-gradient-gold">We've got answers.</span>
+            </h2>
+            <p class="mt-4 text-muted-foreground">
+              Still curious? Book a free demo class and chat with our
+              counsellor.
+            </p>
+          </div>
+
+          <div class="faq-list">
+            <!-- FAQ 1 -->
+            <div class="faq-item active">
+              <button class="faq-question">
+                <span>Can beginners join?</span>
+                <i data-lucide="chevron-down" class="faq-icon"></i>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Absolutely. Our Basic Course is designed from the ground up
+                  for absolute beginners with zero prior knowledge.
+                </p>
+              </div>
+            </div>
+            <!-- FAQ 2 -->
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Are classes online or offline?</span>
+                <i data-lucide="chevron-down" class="faq-icon"></i>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  We offer both online live batches and offline classroom
+                  sessions. You can choose what fits your schedule.
+                </p>
+              </div>
+            </div>
+            <!-- FAQ 3 -->
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Will I get recordings?</span>
+                <i data-lucide="chevron-down" class="faq-icon"></i>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes. Every live session is recorded and available in your
+                  learning portal for lifetime access.
+                </p>
+              </div>
+            </div>
+            <!-- FAQ 4 -->
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Is a certificate provided?</span>
+                <i data-lucide="chevron-down" class="faq-icon"></i>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes, you receive an industry-recognised certificate of
+                  completion at the end of each course.
+                </p>
+              </div>
+            </div>
+            <!-- FAQ 5 -->
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>How do I enroll?</span>
+                <i data-lucide="chevron-down" class="faq-icon"></i>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Click 'Enroll Now' or book a free demo class. Our counsellor
+                  will guide you through the rest.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Final CTA Section -->
+      <section id="contact" class="container-app py-16 reveal">
+        <div class="cta-banner gradient-hero">
+          <div class="cta-blob-1"></div>
+          <div class="cta-blob-2"></div>
+          <div class="cta-content">
+            <i
+              data-lucide="trending-up"
+              style="
+                color: var(--gold);
+                width: 2.5rem;
+                height: 2.5rem;
+                stroke-width: 2.5;
+              "
+            ></i>
+            <h2 class="cta-title mt-4 font-bold">
+              Start Your Trading
+              <span class="text-gradient-gold">Journey Today</span>
+            </h2>
+            <p class="cta-desc">
+              Join 1000+ students who transformed their financial future with
+              Share Trade Academy.
+            </p>
+            <div class="cta-btns">
+              <a href="courses.html" class="btn btn-gold">
+                Join Now
+                <i
+                  data-lucide="arrow-right"
+                  style="width: 1rem; height: 1rem"
+                ></i>
+              </a>
+              <a href="#" class="btn btn-glass">
+                <i
+                  data-lucide="headphones"
+                  style="width: 1rem; height: 1rem"
+                ></i>
+                Talk to a Counsellor
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 3. Footer Section -->
+    <footer class="site-footer gradient-hero">
+      <div class="container-app footer-top">
+        <div class="footer-brand">
+          <div class="footer-brand-title font-bold">
+            <span
+              class="logo-icon gradient-green shadow-glow-green"
+              style="height: 2.25rem; width: 2.25rem"
+            >
+              <i data-lucide="trending-up" style="stroke-width: 2.5"></i>
+            </span>
+            Share Trade Academy
+          </div>
+          <p class="footer-desc">
+            Learn. Trade. Grow. India's premium stock market training academy
+            empowering traders with practical, expert-led education.
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-instagram"
+              >
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path
+                  d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                ></path>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Youtube">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-youtube"
+              >
+                <path
+                  d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17z"
+                ></path>
+                <path d="m10 15 5-3-5-3z"></path>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Linkedin">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-linkedin"
+              >
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                ></path>
+                <rect width="4" height="12" x="2" y="9"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+          </div>
+        </div>
+
         <div>
-          <span class="text-xs font-semibold uppercase tracking-widest text-secondary">FAQ</span>
-          <h2 class="mt-3 text-3xl text-5xl font-bold text-primary">
-            Questions? <span class="text-gradient-gold">We've got answers.</span>
-          </h2>
-          <p class="mt-4 text-muted-foreground">
-            Still curious? Book a free demo class and chat with our counsellor.
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <ul class="footer-contact-list">
+            <li class="contact-item">
+              <i data-lucide="mail" style="width: 1rem; height: 1rem"></i>
+              <span>info@sharetradeacademy.in</span>
+            </li>
+            <li class="contact-item">
+              <i data-lucide="phone" style="width: 1rem; height: 1rem"></i>
+              <span>+91 00000 00000</span>
+            </li>
+            <li class="contact-item">
+              <i data-lucide="map-pin" style="width: 1rem; height: 1rem"></i>
+              <span>India</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container-app footer-bottom-container">
+          <p>
+            © <span id="current-year">2026</span> Share Trade Academy. All
+            rights reserved.
+          </p>
+          <p>
+            Investments are subject to market risks. Educational content only.
           </p>
         </div>
-        
-        <div class="faq-list">
-          <!-- FAQ 1 -->
-          <div class="faq-item active">
-            <button class="faq-question">
-              <span>Can beginners join?</span>
-              <i data-lucide="chevron-down" class="faq-icon"></i>
-            </button>
-            <div class="faq-answer">
-              <p>Absolutely. Our Basic Course is designed from the ground up for absolute beginners with zero prior knowledge.</p>
-            </div>
-          </div>
-          <!-- FAQ 2 -->
-          <div class="faq-item">
-            <button class="faq-question">
-              <span>Are classes online or offline?</span>
-              <i data-lucide="chevron-down" class="faq-icon"></i>
-            </button>
-            <div class="faq-answer">
-              <p>We offer both online live batches and offline classroom sessions. You can choose what fits your schedule.</p>
-            </div>
-          </div>
-          <!-- FAQ 3 -->
-          <div class="faq-item">
-            <button class="faq-question">
-              <span>Will I get recordings?</span>
-              <i data-lucide="chevron-down" class="faq-icon"></i>
-            </button>
-            <div class="faq-answer">
-              <p>Yes. Every live session is recorded and available in your learning portal for lifetime access.</p>
-            </div>
-          </div>
-          <!-- FAQ 4 -->
-          <div class="faq-item">
-            <button class="faq-question">
-              <span>Is a certificate provided?</span>
-              <i data-lucide="chevron-down" class="faq-icon"></i>
-            </button>
-            <div class="faq-answer">
-              <p>Yes, you receive an industry-recognised certificate of completion at the end of each course.</p>
-            </div>
-          </div>
-          <!-- FAQ 5 -->
-          <div class="faq-item">
-            <button class="faq-question">
-              <span>How do I enroll?</span>
-              <i data-lucide="chevron-down" class="faq-icon"></i>
-            </button>
-            <div class="faq-answer">
-              <p>Click 'Enroll Now' or book a free demo class. Our counsellor will guide you through the rest.</p>
-            </div>
-          </div>
-        </div>
       </div>
-    </section>
+    </footer>
 
-    <!-- Final CTA Section -->
-    <section id="contact" class="container-app py-16">
-      <div class="cta-banner gradient-hero">
-        <div class="cta-blob-1"></div>
-        <div class="cta-blob-2"></div>
-        <div class="cta-content">
-          <i data-lucide="trending-up" style="color: var(--gold); width: 2.5rem; height: 2.5rem; stroke-width: 2.5;"></i>
-          <h2 class="cta-title mt-4 font-bold">
-            Start Your Trading <span class="text-gradient-gold">Journey Today</span>
-          </h2>
-          <p class="cta-desc">
-            Join 1000+ students who transformed their financial future with Share Trade Academy.
-          </p>
-          <div class="cta-btns">
-            <a href="courses.html" class="btn btn-gold">
-              Join Now <i data-lucide="arrow-right" style="width: 1rem; height: 1rem;"></i>
-            </a>
-            <a href="#" class="btn btn-glass">
-              <i data-lucide="headphones" style="width: 1rem; height: 1rem;"></i> Talk to a Counsellor
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- 3. Footer Section -->
-  <footer class="site-footer gradient-hero">
-    <div class="container-app footer-top">
-      <div class="footer-brand">
-        <div class="footer-brand-title font-bold">
-          <span class="logo-icon gradient-green shadow-glow-green" style="height: 2.25rem; width: 2.25rem;">
-            <i data-lucide="trending-up" style="stroke-width: 2.5;"></i>
-          </span>
-          Share Trade Academy
-        </div>
-        <p class="footer-desc">
-          Learn. Trade. Grow. India's premium stock market training academy empowering traders with practical, expert-led education.
-        </p>
-        <div class="footer-socials">
-          <a href="#" class="social-link" aria-label="Instagram">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram">
-              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
-            </svg>
-          </a>
-          <a href="#" class="social-link" aria-label="Youtube">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-youtube">
-              <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17z"></path>
-              <path d="m10 15 5-3-5-3z"></path>
-            </svg>
-          </a>
-          <a href="#" class="social-link" aria-label="Linkedin">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin">
-              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-              <rect width="4" height="12" x="2" y="9"></rect>
-              <circle cx="4" cy="4" r="2"></circle>
-            </svg>
-          </a>
-        </div>
-      </div>
-
-      <div>
-        <h4 class="footer-title">Quick Links</h4>
-        <ul class="footer-links-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="courses.html">Courses</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4 class="footer-title">Contact</h4>
-        <ul class="footer-contact-list">
-          <li class="contact-item">
-            <i data-lucide="mail" style="width: 1rem; height: 1rem;"></i>
-            <span>info@sharetradeacademy.in</span>
-          </li>
-          <li class="contact-item">
-            <i data-lucide="phone" style="width: 1rem; height: 1rem;"></i>
-            <span>+91 00000 00000</span>
-          </li>
-          <li class="contact-item">
-            <i data-lucide="map-pin" style="width: 1rem; height: 1rem;"></i>
-            <span>India</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <div class="container-app footer-bottom-container">
-        <p>© <span id="current-year">2026</span> Share Trade Academy. All rights reserved.</p>
-        <p>Investments are subject to market risks. Educational content only.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Script to update current year dynamically & link main JS -->
-  <script>
-    document.getElementById('current-year').textContent = new Date().getFullYear();
-  </script>
-  <script src="script.js"></script>
-</body>
+    <!-- Script to update current year dynamically & link main JS -->
+    <script>
+      document.getElementById('current-year').textContent =
+        new Date().getFullYear();
+    </script>
+    <script type="module" src="script.js"></script>
+  </body>
 </html>

@@ -18,6 +18,27 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
+  <!-- Live Stock Rates Ticker -->
+  <div class="stock-ticker-bar">
+    <div class="ticker-scroll">
+      <div class="ticker-group">
+        <div class="ticker-item"><span>NIFTY 50</span> <span class="ticker-up">▲ 23,465.60 (+1.12%)</span></div>
+        <div class="ticker-item"><span>SENSEX</span> <span class="ticker-up">▲ 77,150.30 (+0.95%)</span></div>
+        <div class="ticker-item"><span>BANK NIFTY</span> <span class="ticker-up">▲ 49,850.15 (+1.45%)</span></div>
+        <div class="ticker-item"><span>RELIANCE</span> <span class="ticker-down">▼ 2,912.40 (-0.35%)</span></div>
+        <div class="ticker-item"><span>HDFC BANK</span> <span class="ticker-up">▲ 1,610.80 (+2.10%)</span></div>
+        <div class="ticker-item"><span>TCS</span> <span class="ticker-down">▼ 3,850.50 (-0.80%)</span></div>
+      </div>
+      <div class="ticker-group" aria-hidden="true">
+        <div class="ticker-item"><span>NIFTY 50</span> <span class="ticker-up">▲ 23,465.60 (+1.12%)</span></div>
+        <div class="ticker-item"><span>SENSEX</span> <span class="ticker-up">▲ 77,150.30 (+0.95%)</span></div>
+        <div class="ticker-item"><span>BANK NIFTY</span> <span class="ticker-up">▲ 49,850.15 (+1.45%)</span></div>
+        <div class="ticker-item"><span>RELIANCE</span> <span class="ticker-down">▼ 2,912.40 (-0.35%)</span></div>
+        <div class="ticker-item"><span>HDFC BANK</span> <span class="ticker-up">▲ 1,610.80 (+2.10%)</span></div>
+        <div class="ticker-item"><span>TCS</span> <span class="ticker-down">▼ 3,850.50 (-0.80%)</span></div>
+      </div>
+    </div>
+  </div>
 
   <!-- 1. Header Navigation -->
   <header class="site-header">
@@ -85,7 +106,7 @@
     </section>
 
     <!-- Mission & Vision Cards Section -->
-    <section class="container-app py-20 grid md-grid-2 gap-6" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+    <section class="container-app py-20 grid md-grid-2 gap-6 reveal" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
       <!-- Mission Card -->
       <div class="card-app" style="padding: 2.5rem; display: flex; flex-direction: column;">
         <div class="value-icon-container gradient-green shadow-glow-green">
@@ -110,7 +131,7 @@
     </section>
 
     <!-- Timeline Journey Section -->
-    <section class="bg-muted/40 py-20 py-28">
+    <section class="bg-muted/40 py-20 py-28 reveal">
       <div class="container-app">
         <div class="max-w-2xl">
           <span class="text-xs font-semibold uppercase tracking-widest text-secondary">Our Journey</span>
@@ -197,7 +218,7 @@
     </section>
 
     <!-- Core Values Section -->
-    <section class="container-app py-20 py-28">
+    <section class="container-app py-20 py-28 reveal">
       <div class="text-center max-w-2xl mx-auto">
         <span class="text-xs font-semibold uppercase tracking-widest text-secondary">Core Values</span>
         <h2 class="mt-3 text-3xl text-5xl font-bold text-primary">
@@ -258,7 +279,7 @@
     </section>
 
     <!-- Team Section -->
-    <section class="bg-muted/40 py-20 py-28">
+    <section class="bg-muted/40 py-20 py-28 reveal">
       <div class="container-app">
         <div class="text-center max-w-2xl mx-auto">
           <span class="text-xs font-semibold uppercase tracking-widest text-secondary">Meet The Team</span>
@@ -305,7 +326,7 @@
     </section>
 
     <!-- Bottom Explore CTA -->
-    <section class="container-app py-16">
+    <section class="container-app py-16 reveal">
       <div class="cta-banner gradient-hero text-center">
         <div class="cta-blob-1"></div>
         <div class="cta-blob-2"></div>
@@ -400,6 +421,6 @@
   <script>
     document.getElementById('current-year').textContent = new Date().getFullYear();
   </script>
-  <script src="script.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 </html>

@@ -299,3 +299,30 @@
 .btn-full {
   width: 100%;
 }
+
+/* 4. Course Cards Cover Image Utility */
+.course-image-wrapper {
+  overflow: hidden;
+  height: 160px;
+  width: calc(100% + 3rem);
+  margin-top: -1.5rem;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  margin-bottom: 1.5rem;
+  border-top-left-radius: var(--radius-2xl);
+  border-top-right-radius: var(--radius-2xl);
+  position: relative;
+}
+
+.course-card-image {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-app:hover .course-card-image,
+.course-card:hover .course-card-image {
+  transform: scale(1.08);
+}

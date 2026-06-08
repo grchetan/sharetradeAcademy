@@ -24,6 +24,28 @@
     <script src="https://unpkg.com/lucide@latest"></script>
   </head>
   <body>
+    <!-- Live Stock Rates Ticker -->
+    <div class="stock-ticker-bar">
+      <div class="ticker-scroll">
+        <div class="ticker-group">
+          <div class="ticker-item"><span>NIFTY 50</span> <span class="ticker-up">▲ 23,465.60 (+1.12%)</span></div>
+          <div class="ticker-item"><span>SENSEX</span> <span class="ticker-up">▲ 77,150.30 (+0.95%)</span></div>
+          <div class="ticker-item"><span>BANK NIFTY</span> <span class="ticker-up">▲ 49,850.15 (+1.45%)</span></div>
+          <div class="ticker-item"><span>RELIANCE</span> <span class="ticker-down">▼ 2,912.40 (-0.35%)</span></div>
+          <div class="ticker-item"><span>HDFC BANK</span> <span class="ticker-up">▲ 1,610.80 (+2.10%)</span></div>
+          <div class="ticker-item"><span>TCS</span> <span class="ticker-down">▼ 3,850.50 (-0.80%)</span></div>
+        </div>
+        <div class="ticker-group" aria-hidden="true">
+          <div class="ticker-item"><span>NIFTY 50</span> <span class="ticker-up">▲ 23,465.60 (+1.12%)</span></div>
+          <div class="ticker-item"><span>SENSEX</span> <span class="ticker-up">▲ 77,150.30 (+0.95%)</span></div>
+          <div class="ticker-item"><span>BANK NIFTY</span> <span class="ticker-up">▲ 49,850.15 (+1.45%)</span></div>
+          <div class="ticker-item"><span>RELIANCE</span> <span class="ticker-down">▼ 2,912.40 (-0.35%)</span></div>
+          <div class="ticker-item"><span>HDFC BANK</span> <span class="ticker-up">▲ 1,610.80 (+2.10%)</span></div>
+          <div class="ticker-item"><span>TCS</span> <span class="ticker-down">▼ 3,850.50 (-0.80%)</span></div>
+        </div>
+      </div>
+    </div>
+
     <!-- 1. Header Navigation -->
     <header class="site-header">
       <div class="container-app nav-container">
@@ -121,7 +143,7 @@
       </section>
 
       <!-- Category Filters Section -->
-      <section class="container-app py-12">
+      <section class="container-app py-12 reveal">
         <div class="courses-filter-container">
           <button class="filter-btn active" data-filter="All">All</button>
           <button class="filter-btn" data-filter="Beginner">Beginner</button>
@@ -133,9 +155,12 @@
       </section>
 
       <!-- Courses Grid Section -->
-      <section class="container-app pb-20 grid grid-courses gap-6">
+      <section class="container-app pb-20 grid grid-courses gap-6 reveal">
         <!-- Basic Course Card (Beginner) -->
         <div class="course-card" data-level="Beginner">
+          <div class="course-image-wrapper">
+            <div class="course-card-image" style="background-image: url('assets/course-basic.png');"></div>
+          </div>
           <div class="course-card-header">
             <span class="course-level-badge">Beginner</span>
             <span class="course-duration">
@@ -207,6 +232,9 @@
           <span class="badge-app badge-gold course-popular-tag"
             >Most Popular</span
           >
+          <div class="course-image-wrapper">
+            <div class="course-card-image" style="background-image: url('assets/course-advanced.png');"></div>
+          </div>
           <div class="course-card-header">
             <span class="course-level-badge">Advanced</span>
             <span class="course-duration">
@@ -280,6 +308,9 @@
 
         <!-- Intermediate Course Card (Intermediate) -->
         <div class="course-card" data-level="Intermediate">
+          <div class="course-image-wrapper">
+            <div class="course-card-image" style="background-image: url('assets/course-intermediate.png');"></div>
+          </div>
           <div class="course-card-header">
             <span
               class="course-level-badge"
@@ -356,7 +387,7 @@
       </section>
 
       <!-- Every Course Includes Grid -->
-      <section class="bg-muted/40 py-20">
+      <section class="bg-muted/40 py-20 reveal">
         <div class="container-app">
           <div class="text-center max-w-2xl mx-auto">
             <span
@@ -423,7 +454,7 @@
       </section>
 
       <!-- Counselling Callback Form CTA -->
-      <section id="enroll-form" class="container-app py-16">
+      <section id="enroll-form" class="container-app py-16 reveal">
         <div class="cta-banner gradient-hero text-center">
           <div class="cta-blob-1"></div>
           <div class="cta-blob-2"></div>
@@ -471,28 +502,67 @@
             Learn. Trade. Grow. India's premium stock market training academy
             empowering traders with practical, expert-led education.
           </p>
-        <div class="footer-socials">
-          <a href="#" class="social-link" aria-label="Instagram">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram">
-              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
-            </svg>
-          </a>
-          <a href="#" class="social-link" aria-label="Youtube">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-youtube">
-              <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17z"></path>
-              <path d="m10 15 5-3-5-3z"></path>
-            </svg>
-          </a>
-          <a href="#" class="social-link" aria-label="Linkedin">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin">
-              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-              <rect width="4" height="12" x="2" y="9"></rect>
-              <circle cx="4" cy="4" r="2"></circle>
-            </svg>
-          </a>
-        </div>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-instagram"
+              >
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path
+                  d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                ></path>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Youtube">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-youtube"
+              >
+                <path
+                  d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17z"
+                ></path>
+                <path d="m10 15 5-3-5-3z"></path>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Linkedin">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-linkedin"
+              >
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                ></path>
+                <rect width="4" height="12" x="2" y="9"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+          </div>
         </div>
 
         <div>
@@ -542,6 +612,6 @@
       document.getElementById('current-year').textContent =
         new Date().getFullYear();
     </script>
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
   </body>
 </html>
