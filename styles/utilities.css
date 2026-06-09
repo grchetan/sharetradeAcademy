@@ -358,6 +358,13 @@
   width: 100%;
 }
 
+.whatsapp-icon {
+  width: 1.125rem;
+  height: 1.125rem;
+  flex-shrink: 0;
+  fill: currentColor;
+}
+
 /* 4. Course Cards Cover Image Utility */
 .course-image-wrapper {
   overflow: hidden;

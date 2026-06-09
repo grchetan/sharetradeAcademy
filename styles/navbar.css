@@ -133,10 +133,6 @@ header.site-header.menu-open {
   }
 }
 
-.logo-link:hover .logo-brand-img {
-  transform: scale(1.04);
-}
-
 .logo-link:hover .logo-icon {
   transform: scale(1.08) rotate(3deg);
   box-shadow: var(--shadow-glow-green);
