@@ -62,9 +62,9 @@ header.site-header {
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Scrolled State - Moves closer to top ticker, keeps solid white */
+/* Scrolled State - Floats elegantly at the top of the screen */
 header.site-header.scrolled {
-  top: 2.75rem; /* Adjusted down for scrolled state */
+  top: 0.75rem;
   background: #f7f7f7; /* Solid white, no transparency changes */
   border-color: var(--border);
   box-shadow: var(--shadow-premium);

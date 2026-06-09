@@ -24,24 +24,44 @@
     <script src="https://unpkg.com/lucide@latest"></script>
   </head>
   <body>
-    <!-- Live Stock Rates Ticker -->
-    <div class="stock-ticker-bar">
-      <div class="ticker-scroll">
-        <div class="ticker-group">
-          <div class="ticker-item"><span>NIFTY 50</span> <span class="ticker-up">▲ 23,465.60 (+1.12%)</span></div>
-          <div class="ticker-item"><span>SENSEX</span> <span class="ticker-up">▲ 77,150.30 (+0.95%)</span></div>
-          <div class="ticker-item"><span>BANK NIFTY</span> <span class="ticker-up">▲ 49,850.15 (+1.45%)</span></div>
-          <div class="ticker-item"><span>RELIANCE</span> <span class="ticker-down">▼ 2,912.40 (-0.35%)</span></div>
-          <div class="ticker-item"><span>HDFC BANK</span> <span class="ticker-up">▲ 1,610.80 (+2.10%)</span></div>
-          <div class="ticker-item"><span>TCS</span> <span class="ticker-down">▼ 3,850.50 (-0.80%)</span></div>
+    <!-- Top Contact & Announcement Banner -->
+    <div class="contact-banner">
+      <div class="container-app contact-banner-container">
+        <!-- Left Side: Contact Info -->
+        <div class="contact-banner-left">
+          <a href="tel:+918828597226" class="banner-contact-item">
+            <i data-lucide="phone" class="banner-icon"></i>
+            <span>+91 88285 97226</span>
+          </a>
+          <span class="banner-separator">|</span>
+          <a href="mailto:info@sharetradeacademy.in" class="banner-contact-item">
+            <i data-lucide="mail" class="banner-icon"></i>
+            <span>info@sharetradeacademy.in</span>
+          </a>
+          <span class="banner-separator">|</span>
+          <span class="banner-contact-item hide-mobile">
+            <i data-lucide="clock" class="banner-icon"></i>
+            <span>Mon - Sat: 9 AM - 6 PM</span>
+          </span>
         </div>
-        <div class="ticker-group" aria-hidden="true">
-          <div class="ticker-item"><span>NIFTY 50</span> <span class="ticker-up">▲ 23,465.60 (+1.12%)</span></div>
-          <div class="ticker-item"><span>SENSEX</span> <span class="ticker-up">▲ 77,150.30 (+0.95%)</span></div>
-          <div class="ticker-item"><span>BANK NIFTY</span> <span class="ticker-up">▲ 49,850.15 (+1.45%)</span></div>
-          <div class="ticker-item"><span>RELIANCE</span> <span class="ticker-down">▼ 2,912.40 (-0.35%)</span></div>
-          <div class="ticker-item"><span>HDFC BANK</span> <span class="ticker-up">▲ 1,610.80 (+2.10%)</span></div>
-          <div class="ticker-item"><span>TCS</span> <span class="ticker-down">▼ 3,850.50 (-0.80%)</span></div>
+        
+        <!-- Right Side: News & Socials -->
+        <div class="contact-banner-right">
+          <span class="banner-news">
+            <span class="pulse-dot"></span>
+            <strong>Next Batch:</strong> Offline Classroom — Enroll Now!
+          </span>
+          <div class="banner-socials">
+            <a href="https://www.instagram.com/sharetradeacademy/" target="_blank" rel="noopener noreferrer" class="banner-social-icon" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <a href="http://t.me/sharetradeacademy" target="_blank" rel="noopener noreferrer" class="banner-social-icon" aria-label="Telegram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </a>
+            <a href="https://wa.me/918828597226?text=Hello%21%20I%20have%20some%20questions%20about%20the%20courses%20offered%20at%20Share%20Trade%20Academy.%20Can%20you%20please%20assist%20me%3F" target="_blank" rel="noopener noreferrer" class="banner-social-icon" aria-label="WhatsApp">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -50,7 +70,11 @@
     <header class="site-header">
       <div class="container-app nav-container">
         <a href="index.html" class="logo-link group">
-          <img src="assets/logo.jpg" alt="Share Trade Academy" class="logo-brand-img" />
+          <img
+            src="assets/logo.jpg"
+            alt="Share Trade Academy"
+            class="logo-brand-img"
+          />
         </a>
 
         <!-- Desktop Nav Links -->
@@ -69,7 +93,11 @@
             style="padding: 0.625rem 1.5rem"
             target="_blank"
             rel="noopener noreferrer"
-            ><svg class="whatsapp-icon" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>Enroll Now</a
+            ><svg class="whatsapp-icon" viewBox="0 0 448 512">
+              <path
+                d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"
+              /></svg
+            >Enroll Now</a
           >
         </div>
 
@@ -91,8 +119,27 @@
           <a href="courses.html" class="mobile-nav-link">Courses</a>
           <a href="about.html" class="mobile-nav-link">About</a>
           <a href="contact.html" class="mobile-nav-link">Contact</a>
-          <a href="https://wa.me/918828597226?text=Hello%21%20I%20am%20interested%20in%20enrolling%20in%20Share%20Trade%20Academy.%20Please%20provide%20more%20details." class="mobile-cta-link" target="_blank" rel="noopener noreferrer">
-            <svg class="whatsapp-icon" viewBox="0 0 448 512" style="width: 0.9rem; height: 0.9rem; vertical-align: middle; display: inline-block; margin-right: 0.35rem;"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>Enroll Now</a
+          <a
+            href="https://wa.me/918828597226?text=Hello%21%20I%20am%20interested%20in%20enrolling%20in%20Share%20Trade%20Academy.%20Please%20provide%20more%20details."
+            class="mobile-cta-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              class="whatsapp-icon"
+              viewBox="0 0 448 512"
+              style="
+                width: 0.9rem;
+                height: 0.9rem;
+                vertical-align: middle;
+                display: inline-block;
+                margin-right: 0.35rem;
+              "
+            >
+              <path
+                d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"
+              /></svg
+            >Enroll Now</a
           >
         </div>
       </div>
@@ -158,7 +205,10 @@
         <!-- Basic Course Card (Beginner) -->
         <div class="course-card" data-level="Beginner">
           <div class="course-image-wrapper">
-            <div class="course-card-image" style="background-image: url('assets/course-basic.png');"></div>
+            <div
+              class="course-card-image"
+              style="background-image: url('assets/course-basic.png')"
+            ></div>
           </div>
           <div class="course-card-header">
             <span class="course-level-badge">Beginner</span>
@@ -219,22 +269,122 @@
           </div>
 
           <div class="course-card-footer">
-            <a href="https://wa.me/918828597226?text=Hello%21%20I%20am%20interested%20in%20enrolling%20in%20the%20Basic%20Course%20at%20Share%20Trade%20Academy." class="btn btn-primary btn-full" target="_blank" rel="noopener noreferrer"
-              ><svg class="whatsapp-icon" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>Enroll Now
+            <a
+              href="https://wa.me/918828597226?text=Hello%21%20I%20am%20interested%20in%20enrolling%20in%20the%20Basic%20Course%20at%20Share%20Trade%20Academy."
+              class="btn btn-primary btn-full"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><svg class="whatsapp-icon" viewBox="0 0 448 512">
+                <path
+                  d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"
+                /></svg
+              >Enroll Now
             </a>
           </div>
         </div>
 
-        <!-- Advanced Course Card (Advanced - Featured) -->
-        <div class="course-card featured" data-level="Advanced">
+        <!-- Intermediate Course Card (Intermediate - Featured) -->
+        <div class="course-card featured" data-level="Intermediate">
           <span class="badge-app badge-gold course-popular-tag"
             >Most Popular</span
           >
           <div class="course-image-wrapper">
-            <div class="course-card-image" style="background-image: url('assets/course-advanced.png');"></div>
+            <div
+              class="course-card-image"
+              style="background-image: url('assets/course-intermediate.png')"
+            ></div>
           </div>
           <div class="course-card-header">
-            <span class="course-level-badge">Advanced</span>
+            <span class="course-level-badge">Intermediate</span>
+            <span class="course-duration">
+              <i
+                data-lucide="clock"
+                style="width: 0.875rem; height: 0.875rem"
+              ></i>
+              2 Months
+            </span>
+          </div>
+          <h3 class="course-title font-bold">Intermediate Course</h3>
+          <p class="course-subtitle">For Serious Traders</p>
+
+          <div class="course-price-container">
+            <span class="course-price">₹9,999</span>
+            <span class="course-price-type">one-time</span>
+          </div>
+
+          <div class="course-syllabus-container">
+            <h4 class="course-syllabus-heading">Syllabus</h4>
+            <ul class="course-syllabus-list">
+              <li class="course-syllabus-item">
+                <i data-lucide="check" style="width: 1rem; height: 1rem"></i>
+                <span>Technical Analysis</span>
+              </li>
+              <li class="course-syllabus-item">
+                <i data-lucide="check" style="width: 1rem; height: 1rem"></i>
+                <span>Trend Analysis</span>
+              </li>
+              <li class="course-syllabus-item">
+                <i data-lucide="check" style="width: 1rem; height: 1rem"></i>
+                <span>Chart Patterns</span>
+              </li>
+              <li class="course-syllabus-item">
+                <i data-lucide="check" style="width: 1rem; height: 1rem"></i>
+                <span>Swing Trading</span>
+              </li>
+              <li class="course-syllabus-item">
+                <i data-lucide="check" style="width: 1rem; height: 1rem"></i>
+                <span>Intraday Trading</span>
+              </li>
+              <li class="course-syllabus-item">
+                <i data-lucide="check" style="width: 1rem; height: 1rem"></i>
+                <span>Trading Psychology</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="course-includes-container">
+            <h4 class="course-includes-heading">Includes</h4>
+            <div class="course-includes-tags">
+              <span class="course-include-tag">Live Market Sessions</span>
+              <span class="course-include-tag">Recordings</span>
+              <span class="course-include-tag">Certificate</span>
+              <span class="course-include-tag">Mentor Q&A</span>
+              <span class="course-include-tag">Community</span>
+            </div>
+          </div>
+
+          <div class="course-card-footer">
+            <a
+              href="https://wa.me/918828597226?text=Hello%21%20I%20am%20interested%20in%20enrolling%20in%20the%20Intermediate%20Course%20at%20Share%20Trade%20Academy."
+              class="btn btn-gold btn-full"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><svg class="whatsapp-icon" viewBox="0 0 448 512">
+                <path
+                  d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"
+                /></svg
+              >Enroll Now
+            </a>
+          </div>
+        </div>
+
+        <!-- Advanced Course Card (Advanced) -->
+        <div class="course-card" data-level="Advanced">
+          <div class="course-image-wrapper">
+            <div
+              class="course-card-image"
+              style="background-image: url('assets/course-advanced.png')"
+            ></div>
+          </div>
+          <div class="course-card-header">
+            <span
+              class="course-level-badge"
+              style="
+                background-color: rgba(10, 37, 64, 0.05);
+                color: var(--navy);
+              "
+              >Advanced</span
+            >
             <span class="course-duration">
               <i
                 data-lucide="clock"
@@ -297,86 +447,16 @@
           </div>
 
           <div class="course-card-footer">
-            <a href="https://wa.me/918828597226?text=Hello%21%20I%20am%20interested%20in%20enrolling%20in%20the%20Advanced%20Course%20at%20Share%20Trade%20Academy." class="btn btn-gold btn-full" target="_blank" rel="noopener noreferrer"
-              ><svg class="whatsapp-icon" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>Enroll Now
-            </a>
-          </div>
-        </div>
-
-        <!-- Intermediate Course Card (Intermediate) -->
-        <div class="course-card" data-level="Intermediate">
-          <div class="course-image-wrapper">
-            <div class="course-card-image" style="background-image: url('assets/course-intermediate.png');"></div>
-          </div>
-          <div class="course-card-header">
-            <span
-              class="course-level-badge"
-              style="
-                background-color: rgba(10, 37, 64, 0.05);
-                color: var(--navy);
-              "
-              >Intermediate</span
-            >
-            <span class="course-duration">
-              <i
-                data-lucide="clock"
-                style="width: 0.875rem; height: 0.875rem"
-              ></i>
-              2 Months
-            </span>
-          </div>
-          <h3 class="course-title font-bold">Intermediate Course</h3>
-          <p class="course-subtitle">For Serious Traders</p>
-
-          <div class="course-price-container">
-            <span class="course-price">₹9,999</span>
-            <span class="course-price-type">one-time</span>
-          </div>
-
-          <div class="course-syllabus-container">
-            <h4 class="course-syllabus-heading">Syllabus</h4>
-            <ul class="course-syllabus-list">
-              <li class="course-syllabus-item">
-                <i data-lucide="check" style="width: 1rem; height: 1rem"></i>
-                <span>Technical Analysis</span>
-              </li>
-              <li class="course-syllabus-item">
-                <i data-lucide="check" style="width: 1rem; height: 1rem"></i>
-                <span>Trend Analysis</span>
-              </li>
-              <li class="course-syllabus-item">
-                <i data-lucide="check" style="width: 1rem; height: 1rem"></i>
-                <span>Chart Patterns</span>
-              </li>
-              <li class="course-syllabus-item">
-                <i data-lucide="check" style="width: 1rem; height: 1rem"></i>
-                <span>Swing Trading</span>
-              </li>
-              <li class="course-syllabus-item">
-                <i data-lucide="check" style="width: 1rem; height: 1rem"></i>
-                <span>Intraday Trading</span>
-              </li>
-              <li class="course-syllabus-item">
-                <i data-lucide="check" style="width: 1rem; height: 1rem"></i>
-                <span>Trading Psychology</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="course-includes-container">
-            <h4 class="course-includes-heading">Includes</h4>
-            <div class="course-includes-tags">
-              <span class="course-include-tag">Live Market Sessions</span>
-              <span class="course-include-tag">Recordings</span>
-              <span class="course-include-tag">Certificate</span>
-              <span class="course-include-tag">Mentor Q&A</span>
-              <span class="course-include-tag">Community</span>
-            </div>
-          </div>
-
-          <div class="course-card-footer">
-            <a href="https://wa.me/918828597226?text=Hello%21%20I%20am%20interested%20in%20enrolling%20in%20the%20Intermediate%20Course%20at%20Share%20Trade%20Academy." class="btn btn-primary btn-full" target="_blank" rel="noopener noreferrer"
-              ><svg class="whatsapp-icon" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>Enroll Now
+            <a
+              href="https://wa.me/918828597226?text=Hello%21%20I%20am%20interested%20in%20enrolling%20in%20the%20Advanced%20Course%20at%20Share%20Trade%20Academy."
+              class="btn btn-primary btn-full"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><svg class="whatsapp-icon" viewBox="0 0 448 512">
+                <path
+                  d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"
+                /></svg
+              >Enroll Now
             </a>
           </div>
         </div>
@@ -485,16 +565,44 @@
     <footer class="site-footer gradient-hero">
       <!-- Rising Stock Trend Background SVG -->
       <div class="footer-chart-bg">
-        <svg viewBox="0 0 1440 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0 160 C 300 130, 600 190, 900 90 C 1200 30, 1300 60, 1440 20" stroke="url(#footer-chart-gradient)" stroke-width="4" stroke-linecap="round" class="footer-chart-line" />
-          <path d="M0 160 C 300 130, 600 190, 900 90 C 1200 30, 1300 60, 1440 20 L 1440 200 L 0 200 Z" fill="url(#footer-chart-fill)" opacity="0.05" />
+        <svg
+          viewBox="0 0 1440 200"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 160 C 300 130, 600 190, 900 90 C 1200 30, 1300 60, 1440 20"
+            stroke="url(#footer-chart-gradient)"
+            stroke-width="4"
+            stroke-linecap="round"
+            class="footer-chart-line"
+          />
+          <path
+            d="M0 160 C 300 130, 600 190, 900 90 C 1200 30, 1300 60, 1440 20 L 1440 200 L 0 200 Z"
+            fill="url(#footer-chart-fill)"
+            opacity="0.05"
+          />
           <defs>
-            <linearGradient id="footer-chart-gradient" x1="0" y1="120" x2="1440" y2="20" gradientUnits="userSpaceOnUse">
+            <linearGradient
+              id="footer-chart-gradient"
+              x1="0"
+              y1="120"
+              x2="1440"
+              y2="20"
+              gradientUnits="userSpaceOnUse"
+            >
               <stop offset="0%" stop-color="#00c896" />
               <stop offset="50%" stop-color="#f8b400" />
               <stop offset="100%" stop-color="#00c896" />
             </linearGradient>
-            <linearGradient id="footer-chart-fill" x1="0" y1="120" x2="1440" y2="20" gradientUnits="userSpaceOnUse">
+            <linearGradient
+              id="footer-chart-fill"
+              x1="0"
+              y1="120"
+              x2="1440"
+              y2="20"
+              gradientUnits="userSpaceOnUse"
+            >
               <stop offset="0%" stop-color="#00c896" />
               <stop offset="100%" stop-color="#00c896" stop-opacity="0" />
             </linearGradient>
@@ -506,25 +614,27 @@
         <div class="footer-brand">
           <div class="footer-brand-title font-bold">
             <a href="index.html" class="logo-link">
-              <img src="assets/logo.jpg" alt="Share Trade Academy" class="logo-brand-img" style="height: 2.25rem;" />
+              <img
+                src="assets/logo.jpg"
+                alt="Share Trade Academy"
+                class="logo-brand-img"
+                style="height: 2.25rem"
+              />
             </a>
           </div>
           <p class="footer-desc">
             Learn. Trade. Grow. India's premium stock market training academy
             empowering traders with practical, expert-led education.
           </p>
-          <div class="footer-market-stats">
-            <div class="market-stat-pill">
-              <span class="pill-label">Nifty 50</span>
-              <span class="pill-value">23,465.60 ▲</span>
-            </div>
-            <div class="market-stat-pill">
-              <span class="pill-label">Sensex</span>
-              <span class="pill-value">77,150.30 ▲</span>
-            </div>
-          </div>
+  
           <div class="footer-socials">
-            <a href="#" class="social-link" aria-label="Instagram">
+            <a
+              href="https://www.instagram.com/sharetradeacademy/"
+              class="social-link"
+              aria-label="Instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="18"
@@ -542,6 +652,29 @@
                   d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
                 ></path>
                 <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+              </svg>
+            </a>
+            <a
+              href="http://t.me/sharetradeacademy?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnvV6UXmsW_k8xR4DVMbW5qTmkqYoduYIcClDYc7gsWN_yogpRznl3G1XW3a4_aem_0f9MDBEtdKTM3kbniCdEeg"
+              class="social-link"
+              aria-label="Telegram"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-send"
+              >
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
               </svg>
             </a>
             <a href="#" class="social-link" aria-label="Youtube">
@@ -600,16 +733,42 @@
           <h4 class="footer-title">Contact</h4>
           <ul class="footer-contact-list">
             <li class="contact-item">
-              <i data-lucide="mail" style="width: 1rem; height: 1rem; margin-top: 0.2rem;"></i>
-              <span>Email Us:<br><a href="mailto:info@sharetradeacademy.in" style="color: var(--secondary); font-weight: 500;">info@sharetradeacademy.in</a></span>
+              <i
+                data-lucide="mail"
+                style="width: 1rem; height: 1rem; margin-top: 0.2rem"
+              ></i>
+              <span
+                >Email Us:<br /><a
+                  href="mailto:info@sharetradeacademy.in"
+                  style="color: var(--secondary); font-weight: 500"
+                  >info@sharetradeacademy.in</a
+                ></span
+              >
             </li>
             <li class="contact-item">
-              <i data-lucide="phone" style="width: 1rem; height: 1rem; margin-top: 0.2rem;"></i>
-              <span>Call Us:<br><a href="tel:+918828597226" style="color: var(--secondary); font-weight: 500;">+91 88285 97226</a></span>
+              <i
+                data-lucide="phone"
+                style="width: 1rem; height: 1rem; margin-top: 0.2rem"
+              ></i>
+              <span
+                >Call Us:<br /><a
+                  href="tel:+918828597226"
+                  style="color: var(--secondary); font-weight: 500"
+                  >+91 88285 97226</a
+                ></span
+              >
             </li>
             <li class="contact-item">
-              <i data-lucide="map-pin" style="width: 1rem; height: 1rem; margin-top: 0.2rem;"></i>
-              <span>Address:<br><span style="color: rgba(255, 255, 255, 0.85);">Office No. 502, Shukra Building, Diamond Market, Primal Nagar, Malad East, Mumbai-400097, Maharashtra</span></span>
+              <i
+                data-lucide="map-pin"
+                style="width: 1rem; height: 1rem; margin-top: 0.2rem"
+              ></i>
+              <span
+                >Address:<br /><span style="color: rgba(255, 255, 255, 0.85)"
+                  >Office No. 502, Shukra Building, Diamond Market, Primal
+                  Nagar, Malad East, Mumbai-400097, Maharashtra</span
+                ></span
+              >
             </li>
           </ul>
         </div>
