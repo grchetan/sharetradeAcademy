@@ -4,6 +4,19 @@
    ========================================================================== */
 
 /* 1. Contact Information Grid and Cards */
+.contact-details-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .contact-details-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+  }
+}
+
 .contact-info-grid {
   display: grid;
   gap: 1.5rem;
@@ -12,13 +25,20 @@
 .contact-card-item {
   display: flex;
   align-items: flex-start;
-  gap: 1.25rem;
+  gap: 1rem;
   background-color: var(--card);
   border: 1px solid var(--border);
   border-radius: var(--radius-2xl);
-  padding: 1.5rem 2rem;
+  padding: 1.25rem 1rem;
   box-shadow: var(--shadow-glass);
   transition: var(--transition-normal);
+}
+
+@media (min-width: 768px) {
+  .contact-card-item {
+    gap: 1.25rem;
+    padding: 1.5rem 2rem;
+  }
 }
 
 .contact-card-item:hover {
@@ -28,14 +48,21 @@
 }
 
 .contact-icon-wrapper {
-  height: 3.5rem;
-  width: 3.5rem;
+  height: 3rem;
+  width: 3rem;
   border-radius: 50%;
   display: grid;
   place-items: center;
   flex-shrink: 0;
   color: var(--navy);
   box-shadow: var(--shadow-glow-green);
+}
+
+@media (min-width: 768px) {
+  .contact-icon-wrapper {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
 }
 
 .contact-detail-title {
@@ -47,10 +74,18 @@
 }
 
 .contact-detail-val {
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--navy);
   margin-top: 0.25rem;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+@media (min-width: 768px) {
+  .contact-detail-val {
+    font-size: 1.125rem;
+  }
 }
 
 /* 2. Contact Glassmorphic Feedback Form */
