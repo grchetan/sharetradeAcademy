@@ -3,6 +3,212 @@
    PREMIUM FLOATING NAVBAR & INTERACTIVE LINK STYLES
    ========================================================================== */
 
+/* 0. Top Contact & Announcement Banner */
+.contact-banner {
+  position: relative;
+  z-index: 120;
+  background: linear-gradient(135deg, #0A2540 0%, #112d4d 50%, #071c33 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: var(--font-sans);
+}
+
+.contact-banner-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .contact-banner-container {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    gap: 0.75rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .contact-banner-container {
+    flex-direction: row;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    gap: 1.5rem;
+  }
+}
+
+.contact-banner-left {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+@media (max-width: 767px) {
+  .contact-banner-left {
+    gap: 0.5rem 1.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .contact-banner-left {
+    gap: 1rem;
+  }
+}
+
+.banner-contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition-fast);
+}
+
+.banner-contact-item:hover {
+  color: var(--secondary);
+}
+
+.banner-icon {
+  width: 0.875rem !important;
+  height: 0.875rem !important;
+  color: var(--secondary);
+}
+
+.banner-separator {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 0.75rem;
+}
+
+@media (max-width: 767px) {
+  .banner-separator {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hide-mobile {
+    display: none;
+  }
+}
+
+.contact-banner-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (max-width: 767px) {
+  .contact-banner-right {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+  }
+  .banner-news {
+    width: 100%;
+    justify-content: center;
+    max-width: 340px;
+  }
+  .banner-socials {
+    justify-content: center;
+  }
+}
+
+.banner-news {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.banner-news strong {
+  color: var(--gold);
+}
+
+.pulse-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--secondary);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--secondary);
+  animation: pulse-dot-anim 2s infinite;
+}
+
+@keyframes pulse-dot-anim {
+  0% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(0, 200, 150, 0.7);
+  }
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 6px rgba(0, 200, 150, 0);
+  }
+  100% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(0, 200, 150, 0);
+  }
+}
+
+.banner-socials {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.banner-social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.65rem;
+  height: 1.65rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.banner-social-icon svg {
+  width: 0.9rem !important;
+  height: 0.9rem !important;
+}
+
+/* Specific hover effects for a premium look */
+.banner-social-icon[aria-label="Instagram"]:hover {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  border-color: transparent;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(220, 39, 67, 0.4);
+}
+
+.banner-social-icon[aria-label="Telegram"]:hover {
+  background: #0088cc;
+  border-color: #0088cc;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 136, 204, 0.4);
+}
+
+.banner-social-icon[aria-label="WhatsApp"]:hover {
+  background: #25D366;
+  border-color: #25D366;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+}
+
 /* Live Stock Ticker Bar at the very top */
 .stock-ticker-bar {
   background-color: var(--navy);
@@ -49,7 +255,7 @@
 /* Header Wrapper - Premium Floating Pill Layout (Pure Solid White Theme) */
 header.site-header {
   position: fixed;
-  top: 3.5rem; /* Adjusted down to clear the stock ticker */
+  top: calc(var(--banner-height, 44px) + 0.75rem);
   left: 50%;
   transform: translateX(-50%);
   width: calc(100% - 2.5rem);

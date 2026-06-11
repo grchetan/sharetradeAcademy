@@ -80,13 +80,13 @@
 .pt-20 { padding-top: 5rem; }
 
 .hero-padding {
-  padding-top: 9.5rem;
+  padding-top: calc(var(--banner-height, 84px) + var(--header-height, 72px) + 1.25rem);
   padding-bottom: 5rem;
 }
 
 @media (min-width: 768px) {
   .hero-padding {
-    padding-top: 13rem;
+    padding-top: calc(var(--banner-height, 44px) + var(--header-height, 80px) + 4.5rem);
     padding-bottom: 8rem;
   }
 }

@@ -8,8 +8,25 @@ document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
   }
 
-  // 1. Navigation Scroll Effect
+  // 1. Navigation Scroll Effect & Dynamic Layout Offsets
   const header = document.querySelector('header.site-header');
+  const navContainer = document.querySelector('.nav-container');
+  const banner = document.querySelector('.contact-banner');
+
+  const updateHeaderOffsets = () => {
+    if (banner) {
+      document.documentElement.style.setProperty('--banner-height', `${banner.offsetHeight}px`);
+    }
+    if (navContainer) {
+      document.documentElement.style.setProperty('--header-height', `${navContainer.offsetHeight}px`);
+    }
+  };
+
+  // Run on interaction events to guarantee layout alignment
+  updateHeaderOffsets();
+  window.addEventListener('resize', updateHeaderOffsets);
+  window.addEventListener('load', updateHeaderOffsets);
+
   if (header) {
     const handleScroll = () => {
       if (window.scrollY > 10) {
